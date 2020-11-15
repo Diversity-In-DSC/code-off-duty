@@ -1,13 +1,28 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /*background: black;*/
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: 'Anurati';
+  src: url(./assets/fonts/Anurati-Regular.otf) format("opentype");
 }
+
+@font-face {
+  font-family: 'Valorant';
+  src: url(./assets/fonts/Valorant.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: 'Content';
+  src: url(./assets/fonts/Content.woff2) format("woff");
+}
+
+canvas {
+  z-index: -999;
+}
+
+
