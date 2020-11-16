@@ -9,13 +9,13 @@ import CODFooter from "./sections/CODFooter";
 class App extends React.Component {
   render() {
     return (
-      <div style={{fontFamily: 'Content'}} className="text-center mt-5">
-        <MatrixRain/>
-        <Information/>
-        <TracksPrizes/>
-        <Support/>
-        <FAQ/>
-        <CODFooter/>
+      <div style={{ fontFamily: "Content" }} className="text-center mt-5">
+        <MatrixRain />
+        <Information />
+        <TracksPrizes />
+        <Support />
+        <FAQ />
+        <CODFooter />
       </div>
     );
   }
