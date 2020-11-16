@@ -3,21 +3,21 @@
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /*background: black;*/
+  /* background: black; */
 }
 
 @font-face {
-  font-family: 'Anurati';
+  font-family: "Anurati";
   src: url(./assets/fonts/Anurati-Regular.otf) format("opentype");
 }
 
 @font-face {
-  font-family: 'Valorant';
+  font-family: "Valorant";
   src: url(./assets/fonts/Valorant.ttf) format("truetype");
 }
 
 @font-face {
-  font-family: 'Content';
+  font-family: "Content";
   src: url(./assets/fonts/Poppins-Regular.ttf) format("truetype");
 }
 
@@ -26,7 +26,6 @@
     font-size: 30pt;
   }
 }
-
 
 @media only screen and (min-width: 768px) {
   #title {
@@ -43,5 +42,3 @@
 canvas {
   z-index: -999;
 }
-
-
