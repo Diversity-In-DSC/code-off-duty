@@ -13,9 +13,9 @@ class App extends React.Component {
         <MatrixRain />
         <Information />
         <TracksPrizes />
-        <Support />
+        {/* <Support />
         <FAQ />
-        <CODFooter />
+        <CODFooter /> */}
       </div>
     );
   }

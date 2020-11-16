@@ -13,25 +13,28 @@ const data = {
       logo: <MLlogo style={{ height: "100px", width: "100px" }} />,
       color: "#DB4437",
       info:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit Suspendisse dignissim tellus non turpis dignissim",
+        "Artificial Intelligence (AI) and Machine Learning (ML) are two very hot buzzwords right now, and often seem to be used interchangeably. ... Machine Learning is a current application of AI based around the idea that we should really just be able to give machines access to data and let them learn for themselves.",
     },
     {
       name: "AR/VR",
       logo: <ARVRlogo style={{ height: "100px", width: "100px" }} />,
       color: "#F4B400",
-      info: "AR/VR is dope",
+      info:
+        "Augmented reality (AR) adds digital elements to a live view often by using the camera on a smartphone. Examples of augmented reality experiences include Snapchat lenses and the game Pokemon Go. Virtual reality (VR) implies a complete immersion experience that shuts out the physical world",
     },
     {
       name: "Blockchain",
       logo: <BlockchainLogo style={{ height: "100px", width: "100px" }} />,
       color: "#4285F4",
-      info: "blockchain is dope",
+      info:
+        "Blockchain is a system of recording information in a way that makes it difficult or impossible to change, hack, or cheat the system. A blockchain is essentially a digital ledger of transactions that is duplicated and distributed across the entire network of computer systems on the blockchain.",
     },
     {
       name: "Open Inovtion",
       logo: <OIlogo style={{ height: "100px", width: "100px" }} o />,
       color: "#0F9D58",
-      info: "open innovation is dope",
+      info:
+        "Open innovation is “the use of purposive inflows and outflows of knowledge to accelerate internal innovation, and expand the markets for external use of innovation, respectively.”",
     },
   ],
 };
