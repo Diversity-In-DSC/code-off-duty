@@ -40,7 +40,10 @@ const data = {
 const TracksPrizes = () => {
   return (
     <Container>
-      <p className="h3 text-white" style={{ fontFamily: "Valorant" }}>
+      <p
+        className="h3 text-center text-white"
+        style={{ fontFamily: "Valorant", marginTop: "70px" }}
+      >
         Tracks
       </p>
 
@@ -79,7 +82,7 @@ const TracksPrizes = () => {
       </Row>
 
       <p
-        className="h3 text-white"
+        className="h3 text-center text-white"
         style={{
           fontFamily: "Valorant",
           marginTop: "100px",
@@ -100,6 +103,7 @@ const TracksPrizes = () => {
               justifyContent: "center",
               alignItems: "center",
               color: "white",
+              textAlign: "center",
             }}
             className="prizes1"
           >
@@ -122,6 +126,7 @@ const TracksPrizes = () => {
               justifyContent: "center",
               alignItems: "center",
               color: "white",
+              textAlign: "center",
             }}
             className="prizes2"
           >
@@ -144,6 +149,7 @@ const TracksPrizes = () => {
               justifyContent: "center",
               alignItems: "center",
               color: "white",
+              textAlign: "center",
             }}
             className="prizes3"
           >

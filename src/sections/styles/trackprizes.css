@@ -11,12 +11,14 @@
 
 .prizes2:hover {
   background-color: #f4b400;
+  cursor: pointer;
   color: black;
   animation: fade-in-yellow 0.7s ease-out;
 }
 
 .prizes3:hover {
   background-color: #0f9d58;
+  cursor: pointer;
   color: black;
   animation: fade-in-green 0.7s ease-out;
 }
@@ -29,7 +31,19 @@
   text-align: center;
 }
 
-.track:hover .track-img {
+.track0:hover .track-img {
+  display: none;
+}
+
+.track1:hover .track-img {
+  display: none;
+}
+
+.track2:hover .track-img {
+  display: none;
+}
+
+.track3:hover .track-img {
   display: none;
 }
 
@@ -63,7 +77,25 @@
   animation: fade-in-green 0.7s ease-out;
 }
 
-.track:hover .track-info {
+.track0:hover .track-info {
+  display: block;
+  text-align: center;
+  animation: fade-in 0.7s ease-out;
+}
+
+.track1:hover .track-info {
+  display: block;
+  text-align: center;
+  animation: fade-in 0.7s ease-out;
+}
+
+.track2:hover .track-info {
+  display: block;
+  text-align: center;
+  animation: fade-in 0.7s ease-out;
+}
+
+.track3:hover .track-info {
   display: block;
   text-align: center;
   animation: fade-in 0.7s ease-out;

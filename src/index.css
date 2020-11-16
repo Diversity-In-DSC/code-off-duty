@@ -18,7 +18,25 @@
 
 @font-face {
   font-family: "Content";
-  src: url(./assets/fonts/Content.woff2) format("woff");
+  src: url(./assets/fonts/Poppins-Regular.ttf) format("truetype");
+}
+
+@media only screen and (max-width: 768px) {
+  #title {
+    font-size: 30pt;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #title {
+    font-size: 50pt;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  #title {
+    font-size: 76pt;
+  }
 }
 
 canvas {
