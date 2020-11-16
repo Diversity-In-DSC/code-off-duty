@@ -71,7 +71,8 @@ class Information extends Component {
         </Row>
 
         <Row className="justify-content-center justify-content-around mt-5">
-          <Col className="mb-5 mb-xl-0" style={{border: "2px solid #ffe05d", borderRadius: 12}} xs={11} xl={5}>
+          <Col className="mb-5 mb-xl-0"
+               style={{border: "2px solid #ffe05d", borderRadius: 12, boxShadow: "10px -10px rgba(255, 224, 93, 0.5)", backgroundColor: "#111"}} xs={11} xl={5}>
             <Row className="text-white justify-content-center my-3">
               <h3 style={{fontFamily: "Valorant"}}>Rules</h3>
             </Row>
@@ -83,7 +84,8 @@ class Information extends Component {
                 }}>{rule.rule}</h6>
             </Row>)}
           </Col>
-          <Col className="my-auto" style={{border: "2px solid #ffe05d", borderRadius: 12}} xs={11} xl={5}>
+          <Col className="my-auto"
+               style={{border: "2px solid #ffe05d", borderRadius: 12, boxShadow: `10px -10px rgba(255, 224, 93, 0.5)`, backgroundColor: "#111"}} xs={11} xl={5}>
             <Row className="text-white justify-content-center my-3">
               <h3 style={{fontFamily: "Valorant"}}>Eligibility</h3>
             </Row>
