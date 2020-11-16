@@ -3,7 +3,6 @@ import p5  from 'p5';
 import Stream from "../rain/Stream";
 
 let streams = [];
-let isRotated = false;
 
 const P5 = p5;
 
@@ -34,23 +33,44 @@ class MatrixRain extends Component {
   }
 
   setup = (p5) => {
-    const canvas = p5.createCanvas(p5.windowWidth, p5.windowHeight)
+    let scrollHeight = Math.max(
+      document.body.scrollHeight, document.documentElement.scrollHeight,
+      document.body.offsetHeight, document.documentElement.offsetHeight,
+      document.body.clientHeight, document.documentElement.clientHeight
+    );
+    let scrollWidth = Math.max(
+      document.body.scrollWidth, document.documentElement.scrollWidth,
+      document.body.offsetWidth, document.documentElement.offsetWidth,
+      document.body.clientWidth, document.documentElement.clientWidth
+    )
+    const canvas = p5.createCanvas(scrollWidth, scrollHeight)
+    p5.fullscreen();
     canvas.parent('sketch-holder')
     canvas.position(0,0)
-    this.setState({p5})
     p5.background(0)
     this.createStreams(p5)
+    this.setState({p5})
   }
 
   draw = (p5) => {
-    p5.background(0, 150);
+    p5.background(0);
     streams.forEach(s => {
       s.render();
     })
   }
 
   windowResized = (p5) => {
-    p5.resizeCanvas(p5.windowWidth, p5.windowHeight);
+    let scrollHeight = Math.max(
+      document.body.scrollHeight, document.documentElement.scrollHeight,
+      document.body.offsetHeight, document.documentElement.offsetHeight,
+      document.body.clientHeight, document.documentElement.clientHeight
+    );
+    let scrollWidth = Math.max(
+      document.body.scrollWidth, document.documentElement.scrollWidth,
+      document.body.offsetWidth, document.documentElement.offsetWidth,
+      document.body.clientWidth, document.documentElement.clientWidth
+    )
+    p5.resizeCanvas(scrollWidth, scrollHeight);
   }
 
   sketch = (p5) => {

@@ -4,8 +4,8 @@ class Stream {
   constructor(p5) {
     this.p5 = p5;
     this.symbols = []
-    this.totalSymbols = p5.round(p5.random(5, 30))
-    this.speed = p5.round(p5.random(5, 10))
+    this.totalSymbols = p5.round(p5.random(5, 20))
+    this.speed = p5.round(p5.random(5, 7))
   }
 
   generateSymbols = (x, y) => {
@@ -21,7 +21,7 @@ class Stream {
 
   render = () => {
     const p5 = this.p5
-    const alpha = 60;
+    const alpha = 80;
     this.symbols.forEach((symbol) => {
       if (symbol.first)
         p5.fill(180, 255, 180, alpha)
