@@ -12,6 +12,7 @@ const data = {
       name: "AI/ML",
       logo: <MLImage style={{ height: "100px", width: "100px" }} />,
       color: "#DB4437",
+      textColor: "white",
       info:
         "Artificial Intelligence (AI) and Machine Learning (ML) are two very hot buzzwords right now, and often seem to be used interchangeably. ... Machine Learning is a current application of AI based around the idea that we should really just be able to give machines access to data and let them learn for themselves.",
     },
@@ -19,6 +20,7 @@ const data = {
       name: "AR/VR",
       logo: <ARVRImage style={{ height: "100px", width: "100px" }} />,
       color: "#F4B400",
+      textColor: "black",
       info:
         "Augmented reality (AR) adds digital elements to a live view often by using the camera on a smartphone. Examples of augmented reality experiences include Snapchat lenses and the game Pokemon Go. Virtual reality (VR) implies a complete immersion experience that shuts out the physical world",
     },
@@ -26,6 +28,7 @@ const data = {
       name: "Blockchain",
       logo: <BlockchainImage style={{ height: "100px", width: "100px" }} />,
       color: "#4285F4",
+      textColor: "white",
       info:
         "Blockchain is a system of recording information in a way that makes it difficult or impossible to change, hack, or cheat the system. A blockchain is essentially a digital ledger of transactions that is duplicated and distributed across the entire network of computer systems on the blockchain.",
     },
@@ -33,6 +36,7 @@ const data = {
       name: "Open Innovation",
       logo: <OIImage style={{ height: "100px", width: "100px" }} o />,
       color: "#0F9D58",
+      textColor: "white",
       info:
         "Open innovation is “the use of purposive inflows and outflows of knowledge to accelerate internal innovation, and expand the markets for external use of innovation, respectively.”",
     },
@@ -57,7 +61,6 @@ const TracksPrizes = () => {
           <Col className="mb-5 mb-xl-0">
             <Container
               style={{
-                background: "#111",
                 border: `2px solid ${track.color}`,
                 width: "250px",
                 display: "flex",
@@ -76,7 +79,7 @@ const TracksPrizes = () => {
                   </h4>
                 </div>
                 <div>
-                  <h6 style={{ color: "white" }} className="track-info">
+                  <h6 style={{ color: `${track.textColor}` }} className="track-info">
                     {track.info}
                   </h6>
                 </div>
@@ -97,11 +100,10 @@ const TracksPrizes = () => {
         Prizes
       </p>
 
-      <Row style={{ marginBottom: "100px" }}>
+      <Row style={{ marginBottom: "100px" }} className="align-items-center">
         <Col className="mb-5 mb-xl-0">
           <Container
             style={{
-              background: "#111",
               border: "2px solid #db4437",
               width: "300px",
               height: "350px",
@@ -126,14 +128,12 @@ const TracksPrizes = () => {
         <Col className="mb-5 mb-xl-0">
           <Container
             style={{
-              background: "#111",
               border: "2px solid #F4B400",
               width: "300px",
               height: "390px",
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              color: "white",
               borderRadius: 10,
               textAlign: "center",
             }}
@@ -151,7 +151,6 @@ const TracksPrizes = () => {
         <Col className="mb-5 mb-xl-0">
           <Container
             style={{
-              background: "#111",
               border: "2px solid #0F9D58",
               width: "300px",
               height: "350px",

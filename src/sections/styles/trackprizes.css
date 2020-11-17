@@ -1,51 +1,55 @@
 .track-info {
-  display: none;
-  /*font-size: small;*/
+	display: none;
+	/*font-size: small;*/
 }
 
 .prizes1:hover {
-  background-color: #db4437;
-  cursor: pointer;
-  color: black;
-  animation: fade-in-red 1s ease-out;
+	background-color: #db4437;
+	cursor: pointer;
+	color: black;
+	animation: fade-in-red 1s ease-out;
+}
+
+.prizes2 {
+	color: white;
 }
 
 .prizes2:hover {
-  background-color: #f4b400;
-  cursor: pointer;
-  color: black;
-  animation: fade-in-yellow 0.7s ease-out;
+	background-color: #f4b400;
+	cursor: pointer;
+	color: black;
+	animation: fade-in-yellow 0.7s ease-out;
 }
 
 .prizes3:hover {
-  background-color: #0f9d58;
-  cursor: pointer;
-  color: black;
-  animation: fade-in-green 0.7s ease-out;
+	background-color: #0f9d58;
+	cursor: pointer;
+	color: black;
+	animation: fade-in-green 0.7s ease-out;
 }
 
 .track-img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
 }
 
 .track0:hover .track-img {
-  display: none;
+	display: none;
 }
 
 .track1:hover .track-img {
-  display: none;
+	display: none;
 }
 
 .track2:hover .track-img {
-  display: none;
+	display: none;
 }
 
 .track3:hover .track-img {
-  display: none;
+	display: none;
 }
 
 /* .track:hover:last-child {
@@ -54,99 +58,128 @@
   animation: fade-in-green 0.7s ease-in;
 } */
 
+.track0 {
+	background-color: #111;
+}
+
+.track1 {
+	background-color: #111;
+}
+
+.track2 {
+	background-color: #111;
+}
+
+.track3 {
+	background-color: #111;
+}
+
+.prizes1 {
+	background-color: #111;
+}
+
+.prizes2 {
+	background-color: #111;
+}
+
+.prizes3 {
+	background-color: #111;
+}
+
+
 .track0:hover {
-  background-color: #db4437;
-  cursor: pointer;
-  animation: fade-in-red 1s ease-out;
+	background-color: #db4437;
+	cursor: pointer;
+	animation: fade-in-red 1s ease-out;
 }
 
 .track1:hover {
-  background-color: #f4b400;
-  cursor: pointer;
-  animation: fade-in-yellow 0.7s ease-out;
+	background-color: #f4b400;
+	cursor: pointer;
+	animation: fade-in-yellow 0.7s ease-out;
 }
 
 .track2:hover {
-  background-color: #4285f4;
-  cursor: pointer;
-  animation: fade-in-blue 0.7s ease-out;
+	background-color: #4285f4;
+	cursor: pointer;
+	animation: fade-in-blue 0.7s ease-out;
 }
 
 .track3:hover {
-  background-color: #0f9d58;
-  cursor: pointer;
-  animation: fade-in-green 0.7s ease-out;
+	background-color: #0f9d58;
+	cursor: pointer;
+	animation: fade-in-green 0.7s ease-out;
 }
 
 .track0:hover .track-info {
-  display: block;
-  text-align: center;
-  animation: fade-in 0.7s ease-out;
+	display: block;
+	text-align: center;
+	animation: fade-in 0.7s ease-out;
 }
 
 .track1:hover .track-info {
-  display: block;
-  text-align: center;
-  animation: fade-in 0.7s ease-out;
+	display: block;
+	text-align: center;
+	animation: fade-in 0.7s ease-out;
 }
 
 .track2:hover .track-info {
-  display: block;
-  text-align: center;
-  animation: fade-in 0.7s ease-out;
+	display: block;
+	text-align: center;
+	animation: fade-in 0.7s ease-out;
 }
 
 .track3:hover .track-info {
-  display: block;
-  text-align: center;
-  animation: fade-in 0.7s ease-out;
+	display: block;
+	text-align: center;
+	animation: fade-in 0.7s ease-out;
 }
 
 @keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
 
 @keyframes fade-in-red {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-    background-color: #db4437;
-  }
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+		background-color: #db4437;
+	}
 }
 
 @keyframes fade-in-yellow {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-    background-color: #f4b400;
-  }
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+		background-color: #f4b400;
+	}
 }
 
 @keyframes fade-in-blue {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-    background-color: #4285f4;
-  }
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+		background-color: #4285f4;
+	}
 }
 
 @keyframes fade-in-green {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-    background-color: #0f9d58;
-  }
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+		background-color: #0f9d58;
+	}
 }
