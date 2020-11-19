@@ -56,10 +56,6 @@ a {
 	transition: all 0.3s ease;
 }
 
-.cta:hover > #label {
-	color: black;
-}
-
 .cta:hover:before {
 	width: 100%;
 	background: rgb(0, 255, 70);
