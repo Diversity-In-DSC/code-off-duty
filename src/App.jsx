@@ -28,7 +28,7 @@ class App extends React.Component {
         {
           reverseAnimation: (direction) => {
             this.showSection("tracks", {
-              rotate: "-30deg", translate: {x: "25%", y: "23%"}, scale: 1, opacity: 1
+              rotate: "-30deg", translate: {x: "0%", y: "0%"}, scale: 1, opacity: 1
             }, direction)
           },
           onClick: (direction) => {
@@ -42,6 +42,11 @@ class App extends React.Component {
           image: <TracksMap style={{background: "none", width: "100%", height: "100%", transform: "rotate(-30deg)"}}/>
         },
         {
+          reverseAnimation: (direction) => {
+            this.showSection("prizes", {
+              rotate: "0deg", translate: {x: "0%", y: "0%"}, scale: 1, opacity: 1
+            }, direction)
+          },
           onClick: (direction) => {
             this.showSection("prizes", {
               rotate: "0deg", translate: {x: "-7%", y: "20%"}, scale: 3, opacity: 1.0
@@ -50,11 +55,16 @@ class App extends React.Component {
           title: "Prizes",
           class: "prizes",
           titleID: "prizes-title",
-          image: <PrizesMedal style={{background: "none", width: "100%", height: "100%"}}/>
+          image: <PrizesMedal style={{background: "none", width: "100%", height: "100%"}} className="ml-3"/>
         }
       ],
       secondRow: [
         {
+          reverseAnimation: (direction) => {
+            this.showSection("faq", {
+              rotate: "30deg", translate: {x: "0%", y: "0%"}, scale: 1, opacity: 1
+            }, direction)
+          },
           onClick: (direction) => {
             this.showSection("faq", {
               rotate: "0deg", translate: {x: "28%", y: "-37%"}, scale: 3, opacity: 1.0
@@ -66,9 +76,14 @@ class App extends React.Component {
           image: <FAQIcon style={{background: "none", width: "100%", height: "100%", transform: "rotate(-30deg)"}}/>
         },
         {
+          reverseAnimation: (direction) => {
+            this.showSection("info", {
+              rotate: "0deg", translate: {x: "0%", y: "0%"}, scale: 1, opacity: 1
+            }, direction)
+          },
           onClick: (direction) => {
             this.showSection("info", {
-              rotate: "0deg", translate: {x: "-15%", y: "-5%"}, scale: 20, opacity: 0.3
+              rotate: "0deg", translate: {x: "-15%", y: "-20%"}, scale: 18, opacity: 0.3
             }, direction)
           },
           title: "What is COD?",
@@ -106,16 +121,16 @@ class App extends React.Component {
 
   }
 
-  // remove maybe???
   getOtherSections(selector) {
     const rest = Array.prototype.filter.call(document.querySelectorAll("#section"), (node) => {
       return !node.classList.contains(selector)
     })
-    Array.prototype.push.apply(rest, [document.querySelector("#jet-plane > svg"),
-      document.querySelector(".cod-title"),
-      document.querySelector(".cod-register"),
-      document.querySelector(`.${selector} > h2`),
-    ])
+    Array.prototype.push.apply(rest,
+      [
+        document.querySelector(".cod-title"),
+        document.querySelector(".cod-register"),
+        document.querySelector(`.${selector} > h2`),
+      ])
     return rest;
   }
 
@@ -123,10 +138,10 @@ class App extends React.Component {
     console.log(selector)
     if (firstRow) {
       const section = this.homeSections.firstRow.filter((s) => s.class === selector)[0];
-      section.reverseAnimation("normal");
+      section.reverseAnimation("reverse");
     } else {
       const section = this.homeSections.secondRow.filter((s) => s.class === selector)[0];
-      section.onClick("reverse");
+      section.reverseAnimation("reverse");
     }
   }
 
@@ -136,26 +151,29 @@ class App extends React.Component {
     const target = document.querySelector(`.${selector} > svg`);
     const targetSection = document.querySelector(`#${selector}-section`);
     targetSection.style.display = "block"
-    target.style.cursor = "default"
-    target.style.zIndex = 1
+    target.style.cursor = direction === "normal" ? "default" : "pointer"
+    const jet = document.querySelector("#jet-plane > svg")
 
     const t1 = anime.timeline({
       easing: "easeInOutExpo",
-      direction,
       duration: 2000,
       autoplay: true
     })
 
     const t2 = anime.timeline({
       easing: "easeInOutExpo",
-      direction,
       duration: 1500,
       autoplay: true
     })
 
     const t3 = anime.timeline({
       easing: "easeInOutExpo",
-      direction,
+      duration: 1500,
+      autoplay: true
+    })
+
+    const t4 = anime.timeline({
+      easing: "easeInOutExpo",
       duration: 1500,
       autoplay: true
     })
@@ -166,22 +184,34 @@ class App extends React.Component {
       rotate: transforms.rotate,
       translateX: transforms.translate.x,
       translateY: transforms.translate.y,
-      // opacity: transforms.opacity,
+      opacity: transforms.opacity
     })
 
     t2.add({
-      targets: `#${selector}-section`,
-      opacity: 1,
+      targets: [`#${selector}-section`],
+      opacity: direction === "normal" ? 1 : 0,
     })
 
     t3.add({
       targets: rest,
-      opacity: 0,
+      opacity: direction === "normal" ? 0 : 1,
       complete: (anim) => {
-        rest.forEach(node => {
-          node.style.pointerEvents = "none";
-        })
+        if (direction === "normal") {
+          rest.forEach(node => {
+            node.style.pointerEvents = "none";
+          })
+        } else {
+          targetSection.style.display = "none"
+          rest.forEach(node => {
+            node.style.pointerEvents = "auto";
+          })
+        }
       }
+    })
+
+    t4.add({
+      targets: jet,
+      opacity: direction === "normal" ? 0 : 0.18
     })
   }
 
@@ -207,7 +237,7 @@ class App extends React.Component {
                      onClick={() => section.onClick("normal")}
                 >
                   {section.image}
-                  <h2 className="mt-3" id={section.titleID}>{section.title}</h2>
+                  <h2 className="mt-3 ml-3" id={section.titleID}>{section.title}</h2>
                 </Row>
               </Col>)}
             </Row>
@@ -224,16 +254,16 @@ class App extends React.Component {
             </Row>
           </Row>
         </Container>
-        <Tracks style={{opacity: 0,}} goBack={(selector) => {
+        <Tracks style={{opacity: 0, display: "none"}} goBack={(selector) => {
           this.goBack(selector, true)
         }}/>
-        <Prizes style={{opacity: 0, zIndex: 3}} goBack={(selector) => {
+        <Prizes style={{opacity: 0, display: "none"}} goBack={(selector) => {
           this.goBack(selector, true)
         }}/>
-        <FAQ style={{opacity: 0, zIndex: 3}} goBack={(selector) => {
+        <FAQ style={{opacity: 0, display: "none"}} goBack={(selector) => {
           this.goBack(selector, false)
         }}/>
-        <Information style={{opacity: 0, zIndex: 3}} goBack={(selector) => {
+        <Information style={{opacity: 0, display: "none"}} goBack={(selector) => {
           this.goBack(selector, false)
         }}/>
       </div>

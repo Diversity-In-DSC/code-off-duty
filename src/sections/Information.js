@@ -6,7 +6,9 @@ class Information extends Component {
     return (
       <Container fluid className="fixed-top px-5" style={this.props.style} id="info-section">
         <Row className="mx-5 align-items-center mt-4">
-          <Col xl={1} className="my-auto mr-n4">
+          <Col xl={1} className="my-auto mr-n4" onClick={() => {
+            this.props.goBack("info")
+          }}>
             <svg width="2em" height="2em" viewBox="0 0 13 10"
                  style={{
                    stroke: "#fff",
@@ -22,6 +24,9 @@ class Information extends Component {
           <Col xl={4} className="p-0">
             <span style={{fontFamily: "Blockletter", fontSize: 42}}>what is code-off-duty?</span>
           </Col>
+        </Row>
+        <Row>
+
         </Row>
       </Container>
     );
