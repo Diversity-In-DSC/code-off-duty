@@ -1,15 +1,15 @@
-.tracks:hover {
+.tracks:hover > svg {
 	cursor: pointer;
 }
 
-.prizes:hover {
+.prizes:hover > svg {
 	cursor: pointer;
 }
 
-.faq:hover {
+.faq:hover > svg {
 	cursor: pointer;
 }
 
-.info:hover {
+.info:hover > svg {
 	cursor: pointer;
 }
