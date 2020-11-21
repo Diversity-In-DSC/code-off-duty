@@ -47,6 +47,7 @@ class App extends React.Component {
               },
               direction
             );
+            this.animations();
           },
           title: "Tracks",
           class: "tracks",
@@ -237,7 +238,7 @@ class App extends React.Component {
         1200
       );
 
-    document.querySelector(".tracks").onClick = t5.play;
+    document.querySelector(".tracks").onClick = t5.play();
   };
 
   getOtherSections(selector) {

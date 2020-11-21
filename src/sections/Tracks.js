@@ -1,11 +1,10 @@
-import React, { Component, useState } from "react";
-import { Col, Container, Row } from "react-bootstrap";
-import { ReactComponent as MLlogo } from "../assets/img/brain.svg";
-import { ReactComponent as ARVRlogo } from "../assets/img/ARVR.svg";
-import { ReactComponent as BlockchainLogo } from "../assets/img/blockchain.svg";
-import { ReactComponent as OIlogo } from "../assets/img/innovation.svg";
+import React, {Component} from "react";
+import {Col, Container, Row} from "react-bootstrap";
+import {ReactComponent as MLlogo} from "../assets/img/brain.svg";
+import {ReactComponent as ARVRlogo} from "../assets/img/ARVR.svg";
+import {ReactComponent as BlockchainLogo} from "../assets/img/blockchain.svg";
+import {ReactComponent as OIlogo} from "../assets/img/innovation.svg";
 import TrackModal from "../components/TrackModal";
-import anime from "animejs/lib/anime.es";
 
 class Tracks extends Component {
   constructor() {
@@ -47,7 +46,7 @@ class Tracks extends Component {
         this.setState({
           showOI: true,
         });
-
+        break;
       default:
         break;
     }
@@ -57,63 +56,6 @@ class Tracks extends Component {
   hgARVR = window.innerWidth * 0.685;
   hgBC = window.innerWidth * 0.52;
   hgOI = window.innerWidth * 0.195;
-
-  // componentDidMount() {
-  //   const t5 = anime.timeline({
-  //     easing: "easeInOutQuad",
-  //     duration: 1500,
-  //     autoplay: true,
-  //   });
-
-  //   const t6 = anime.timeline({
-  //     easing: "easeInOutQuad",
-  //     duration: 1500,
-  //     autoplay: true,
-  //   });
-
-  //   const t7 = anime.timeline({
-  //     easing: "easeInOutQuad",
-  //     duration: 1500,
-  //     autoplay: true,
-  //   });
-
-  //   const t8 = anime.timeline({
-  //     easing: "easeInOutQuad",
-  //     duration: 1500,
-  //     autoplay: true,
-  //   });
-  //   t5.add({
-  //     duration: "2000",
-  //     opacity: "0",
-  //     targets: ".track-ml",
-  //     keyframes: [{ translateY: "400px" }],
-  //     opacity: "1",
-  //   });
-
-  //   t6.add({
-  //     duration: "2000",
-  //     opacity: "0",
-  //     targets: ".track-ARVR",
-  //     keyframes: [{ translateY: "600px" }],
-  //     opacity: "1",
-  //   });
-
-  //   t7.add({
-  //     duration: "2000",
-  //     opacity: "0",
-  //     targets: ".track-BC",
-  //     keyframes: [{ translateY: "850px" }],
-  //     opacity: "1",
-  //   });
-
-  //   t8.add({
-  //     duration: "2000",
-  //     opacity: "0",
-  //     targets: ".track-OI",
-  //     keyframes: [{ translateY: "900px" }],
-  //     opacity: "1",
-  //   });
-  // }
 
   render() {
     const tracks = [
@@ -139,7 +81,7 @@ class Tracks extends Component {
           "Blockchain is a system of recording information in a way that makes it difficult or impossible to change, hack, or cheat the system. A blockchain is essentially a digital ledger of transactions that is duplicated and distributed across the entire network of computer systems on the blockchain.",
       },
       {
-        name: "Open Inovtion",
+        name: "Open Innovation",
         show: this.state.showOI,
         color: "#0F9D58",
         desc:
@@ -173,12 +115,12 @@ class Tracks extends Component {
                 cursor: "pointer",
               }}
             >
-              <path d="M1,5 L11,5" />
-              <polyline points="8 1 12 5 8 9" />
+              <path d="M1,5 L11,5"/>
+              <polyline points="8 1 12 5 8 9"/>
             </svg>
           </Col>
           <Col xl={2} className="p-0">
-            <span style={{ fontFamily: "Blockletter", fontSize: 42 }}>
+            <span style={{fontFamily: "Blockletter", fontSize: 42}}>
               Tracks
             </span>
           </Col>
@@ -203,9 +145,9 @@ class Tracks extends Component {
           onClick={() => this.handleShow("ML")}
         >
           <div className="track-img">
-            <MLlogo style={{ height: "50px", width: "50px" }} />
+            <MLlogo style={{height: "50px", width: "50px"}}/>
             <h4
-              style={{ color: "black", fontSize: "15px" }}
+              style={{color: "black", fontSize: "15px"}}
               className="mt-3 text-center"
             >
               AI/ML
@@ -232,9 +174,9 @@ class Tracks extends Component {
           onClick={() => this.handleShow("AR/VR")}
         >
           <div className="track-img">
-            <ARVRlogo style={{ height: "50px", width: "50px" }} />
+            <ARVRlogo style={{height: "50px", width: "50px"}}/>
             <h4
-              style={{ color: "black", fontSize: "15px" }}
+              style={{color: "black", fontSize: "15px"}}
               className="mt-3 text-center"
             >
               AR/VR
@@ -261,9 +203,9 @@ class Tracks extends Component {
           onClick={() => this.handleShow("BC")}
         >
           <div className="track-img text-center">
-            <BlockchainLogo style={{ height: "50px", width: "50px" }} />
+            <BlockchainLogo style={{height: "50px", width: "50px"}}/>
             <h4
-              style={{ color: "black", fontSize: "15px" }}
+              style={{color: "black", fontSize: "15px"}}
               className="mt-3 text-center"
             >
               Blockchain
@@ -292,10 +234,10 @@ class Tracks extends Component {
           <div className="track-img text-center">
             <OIlogo
               className="mt-3"
-              style={{ height: "50px", width: "50px" }}
+              style={{height: "50px", width: "50px"}}
             />
             <h5
-              style={{ color: "black", fontSize: "15px" }}
+              style={{color: "black", fontSize: "15px"}}
               className="mt-2 text-center"
             >
               Open Innovation
