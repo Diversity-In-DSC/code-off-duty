@@ -227,7 +227,7 @@ class App extends React.Component {
           </Row>
           <Row className="justify-content-center" id="jet-plane">
             <JetPlane
-              style={{top: window.innerHeight, position: "fixed", background: "transparent"}}/>
+                style={{top: window.innerHeight, position: "fixed", background: "transparent"}}/>
           </Row>
           <Row className="px-5 mx-5 bg-transparent h-100 fixed-top align-content-between">
             <Row className="justify-content-between">
