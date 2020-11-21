@@ -1,34 +1,29 @@
 const FAQData = [
     {
-        question: "Cook spinach carefully chopped, then mix with plain vinegar and serve exactly in bottle.",
-        answer: "Remember: boiled chicory tastes best when roasted in a casserole whisked with cinnamon.",
+        question: "What does DSC WOW stands for?",
+        answer: "- WOW stands for Worlds of Wonder. It's the brainchild event of 115 DSC leads who came together to bring something interesting to your doorstep.",
         played: false,
     },
     {
-        question: "The sailor fears with faith, trade the freighter until it waves.",
-        answer: "Well there's nothing like the coal-black love hobbling on the moon.",
+        question: "What are the perks of attending DSC WOW?",
+        answer: "- Apart from the variety of sessions by the best speakers in their domains, we also have goodies and swags for you peeps. So stay tuned!",
         played: false,
     },
     {
-        question: "Everything we do is connected with peace: awareness, purpose, core, moonlight.",
-        answer: "Drink me gibbet, ye rough landlubber!",
+        question: "Who can attend DSC WOW?",
+        answer: "- Students, Developers, Communities & Institutions.",
         played: false,
     },
     {
-        question: "Cook spinach carefully chopped, then mix with plain vinegar and serve exactly in bottle.",
-        answer: "Remember: boiled chicory tastes best when roasted in a casserole whisked with cinnamon.",
+        question: "Is DSC WOW 2020 Free to attend?",
+        answer: "- It's FREE! Just put on your learning caps and hop on.",
         played: false,
     },
     {
-        question: "The sailor fears with faith, trade the freighter until it waves.",
-        answer: "Well there's nothing like the coal-black love hobbling on the moon.",
+        question: "Will Participation Certificates be provided?",
+        answer: "- Yes, participation certificates will be provided to all.",
         played: false,
-    },
-    {
-        question: "Everything we do is connected with peace: awareness, purpose, core, moonlight.",
-        answer: "Drink me gibbet, ye rough landlubber!",
-        played: false,
-    },
+    }
 ]
 
 export default FAQData;

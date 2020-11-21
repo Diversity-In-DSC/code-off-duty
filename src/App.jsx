@@ -55,7 +55,7 @@ class App extends React.Component {
           title: "Prizes",
           class: "prizes",
           titleID: "prizes-title",
-          image: <PrizesMedal style={{background: "none", width: "100%", height: "100%"}} className="ml-3"/>
+          image: <PrizesMedal style={{background: "none", width: "100%", height: "100%"}} className="ml-4"/>
         }
       ],
       secondRow: [
@@ -237,7 +237,7 @@ class App extends React.Component {
                      onClick={() => section.onClick("normal")}
                 >
                   {section.image}
-                  <h2 className="mt-3 ml-3" id={section.titleID}>{section.title}</h2>
+                  <h2 className="mt-3 ml-4" id={section.titleID}>{section.title}</h2>
                 </Row>
               </Col>)}
             </Row>
