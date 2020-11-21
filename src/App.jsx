@@ -90,13 +90,8 @@ class App extends React.Component {
           title: "Prizes",
           class: "prizes",
           titleID: "prizes-title",
-          image: (
-            <PrizesMedal
-              style={{ background: "none", width: "100%", height: "100%" }}
-              className="ml-3"
-            />
-          ),
-        },
+          image: <PrizesMedal style={{background: "none", width: "100%", height: "100%"}} className="ml-4"/>
+        }
       ],
       secondRow: [
         {
@@ -424,33 +419,19 @@ class App extends React.Component {
           </Row>
           <Row className="justify-content-center" id="jet-plane">
             <JetPlane
-              style={{
-                top: window.innerHeight,
-                position: "fixed",
-                background: "transparent",
-              }}
-            />
+                style={{top: window.innerHeight, position: "fixed", background: "transparent"}}/>
           </Row>
           <Row className="px-5 mx-5 bg-transparent h-100 fixed-top align-content-between">
             <Row className="justify-content-between">
-              {this.homeSections.firstRow.map((section, index) => (
-                <Col key={index} xl={2} className="p-4">
-                  <Row
-                    className={`justify-content-center ${section.class}`}
-                    id="section"
-                    style={{ opacity: 0 }}
-                    onClick={() => {
-                      section.onClick("normal");
-                      index === 0 ? this.animations() : null;
-                    }}
-                  >
-                    {section.image}
-                    <h2 className="mt-3 ml-3" id={section.titleID}>
-                      {section.title}
-                    </h2>
-                  </Row>
-                </Col>
-              ))}
+              {this.homeSections.firstRow.map((section, index) => <Col key={index} xl={2}
+                                                                       className="p-4">
+                <Row className={`justify-content-center ${section.class}`} id="section" style={{opacity: 0}}
+                     onClick={() => section.onClick("normal")}
+                >
+                  {section.image}
+                  <h2 className="mt-3 ml-4" id={section.titleID}>{section.title}</h2>
+                </Row>
+              </Col>)}
             </Row>
             <Row className="justify-content-between">
               {this.homeSections.secondRow.map((section, index) => (
