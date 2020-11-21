@@ -207,14 +207,14 @@ class App extends React.Component {
       delay: "1000",
       duration: "1000",
       targets: ".track-ml",
-      keyframes: [{ translateY: "400px" }],
+      translateY: "25vh",
       opacity: "1",
     })
       .add(
         {
           delay: "1000",
           targets: ".track-ARVR",
-          keyframes: [{ translateY: "600px" }],
+          keyframes: [{ translateY: "50vh" }],
           opacity: "1",
         },
         600
@@ -223,7 +223,7 @@ class App extends React.Component {
         {
           delay: "1000",
           targets: ".track-BC",
-          keyframes: [{ translateY: "850px" }],
+          keyframes: [{ translateY: "75vh" }],
           opacity: "1",
         },
         800
@@ -232,7 +232,7 @@ class App extends React.Component {
         {
           delay: "1000",
           targets: ".track-OI",
-          keyframes: [{ translateY: "900px" }],
+          keyframes: [{ translateY: "90vh" }],
           opacity: "1",
         },
         1200
@@ -257,7 +257,6 @@ class App extends React.Component {
   }
 
   goBack(selector, firstRow) {
-    console.log(selector);
     if (firstRow) {
       const section = this.homeSections.firstRow.filter(
         (s) => s.class === selector
@@ -269,6 +268,7 @@ class App extends React.Component {
       )[0];
       section.reverseAnimation("reverse");
     }
+
     const t6 = anime.timeline({
       easing: "easeInOutQuad",
       duration: 750,
@@ -277,13 +277,13 @@ class App extends React.Component {
 
     t6.add({
       targets: ".track-ml",
-      keyframes: [{ translateY: "-400px" }],
+      keyframes: [{ translateY: "-10em" }],
       opacity: "0",
     })
       .add(
         {
           targets: ".track-ARVR",
-          keyframes: [{ translateY: "-600px" }],
+          keyframes: [{ translateY: "-10em" }],
           opacity: "0",
         },
         100
@@ -291,7 +291,7 @@ class App extends React.Component {
       .add(
         {
           targets: ".track-BC",
-          keyframes: [{ translateY: "-850px" }],
+          keyframes: [{ translateY: "-10em" }],
           opacity: "0",
         },
         200
@@ -299,7 +299,7 @@ class App extends React.Component {
       .add(
         {
           targets: ".track-OI",
-          keyframes: [{ translateY: "-900px" }],
+          keyframes: [{ translateY: "-10em" }],
           opacity: "0",
         },
         300
@@ -338,24 +338,6 @@ class App extends React.Component {
       duration: 1500,
       autoplay: true,
     });
-
-    // const t6 = anime.timeline({
-    //   easing: "easeInOutQuad",
-    //   duration: 1500,
-    //   autoplay: true,
-    // });
-
-    // const t7 = anime.timeline({
-    //   easing: "easeInOutQuad",
-    //   duration: 1500,
-    //   autoplay: true,
-    // });
-
-    // const t8 = anime.timeline({
-    //   easing: "easeInOutQuad",
-    //   duration: 1500,
-    //   autoplay: true,
-    // });
 
     t1.add({
       targets: `.${selector} > svg`,

@@ -39,9 +39,8 @@ class FAQ extends Component {
                 <span style={{fontFamily: "Blockletter", fontSize: 42}}>FAQs</span>
               </Col>
             </Row>
-
           </Col>
-          <Col style={{
+          <Col className="mr-5" style={{
             backgroundColor: "rgba(0, 0, 0, 0)",
           }}>
             <Row className="h-100 align-items-center">
@@ -54,7 +53,7 @@ class FAQ extends Component {
                     <Accordion.Toggle as={Card.Header} eventKey={number.toString()}
                                       onClick={() => {
                                         let fqaData = this.state.FAQData;
-                                        fqaData.map((d, index) => {
+                                        fqaData.forEach((d, index) => {
                                           d.played = index === number ? !d.played : false;
                                         })
                                         this.setState({FAQData: fqaData});
@@ -66,12 +65,12 @@ class FAQ extends Component {
                       <Row>
                         <Col sm={11}>
                           <h5>
-                            <snap style={{fontFamily: "Blockletter"}}>
+                            <span style={{fontFamily: "Blockletter"}}>
                               Question>
-                            </snap>
-                            <snap style={{fontFamily: "Poppins"}}>
+                            </span>
+                            <span style={{fontFamily: "Poppins", fontSize: 18}}>
                               {" " + data.question}
-                            </snap>
+                            </span>
                           </h5>
                         </Col>
                         <Col>
@@ -93,20 +92,21 @@ class FAQ extends Component {
                     <Accordion.Collapse eventKey={number.toString()}>
                       <Card.Body>
                         <h5>
-                          <snap style={{fontFamily: "Blockletter"}}>
+                          <span style={{fontFamily: "Blockletter"}}>
                             Answer>
-                          </snap>
-                          <snap style={{
+                          </span>
+                          <span style={{
                             fontFamily: "Poppins",
+                            fontSize: 18
                           }}>
                             {data.played && <WindupChildren speed={500}>
                               {" " + data.answer}
                             </WindupChildren>}
-                          </snap>
-                          <snap style={{
+                          </span>
+                          <span style={{
                             animation: "blink 0.9s infinite",
                           }}>|
-                          </snap>
+                          </span>
                         </h5>
                       </Card.Body>
                     </Accordion.Collapse>

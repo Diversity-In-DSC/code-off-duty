@@ -2,6 +2,7 @@ import React from "react";
 import { Modal, Button } from "react-bootstrap";
 
 const TrackModal = ({ show, handleClose, title, desc, color }) => {
+  console.log(show)
   return (
     <Modal
       size="lg"
@@ -11,7 +12,7 @@ const TrackModal = ({ show, handleClose, title, desc, color }) => {
       onHide={handleClose}
     >
       <Modal.Header closeButton>
-        <Modal.Title className="text-center">{title}</Modal.Title>
+        <Modal.Title className="text-center" style={{fontFamily: "Blockletter"}}>{title}</Modal.Title>
       </Modal.Header>
       <Modal.Body className="text-center">{desc}</Modal.Body>
       <Modal.Footer>

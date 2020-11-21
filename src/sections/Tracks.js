@@ -7,87 +7,75 @@ import {ReactComponent as OIlogo} from "../assets/img/innovation.svg";
 import TrackModal from "../components/TrackModal";
 
 class Tracks extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      showML: false,
-      showARVR: false,
-      showBC: false,
-      showOI: false,
+      trackVisible: []
     };
-  }
+    this.handleShow = this.handleShow.bind(this)
+    this.handleClose = this.handleClose.bind(this)
 
-  handleClose = () => {
-    this.setState({
-      showML: false,
-      showARVR: false,
-      showBC: false,
-      showOI: false,
-    });
-  };
-  handleShow = (show) => {
-    switch (show) {
-      case "ML":
-        this.setState({
-          showML: true,
-        });
-        break;
-      case "AR/VR":
-        this.setState({
-          showARVR: true,
-        });
-        break;
-      case "BC":
-        this.setState({
-          showBC: true,
-        });
-        break;
-      case "OI":
-        this.setState({
-          showOI: true,
-        });
-        break;
-      default:
-        break;
-    }
-  };
+    Array.prototype.push.apply(this.state.trackVisible, [false, false, false, false])
 
-  hgml = window.innerWidth * 0.26;
-  hgARVR = window.innerWidth * 0.685;
-  hgBC = window.innerWidth * 0.52;
-  hgOI = window.innerWidth * 0.195;
-
-  render() {
-    const tracks = [
-      {
-        name: "AI/ML",
-        show: this.state.showML,
-        color: "#DB4437",
-        desc:
-          "Artificial Intelligence (AI) and Machine Learning (ML) are two very hot buzzwords right now, and often seem to be used interchangeably. ... Machine Learning is a current application of AI based around the idea that we should really just be able to give machines access to data and let them learn for themselves.",
-      },
+    this.tracks = [
       {
         name: "AR/VR",
-        show: this.state.showARVR,
+        show: false,
         color: "#F4B400",
+        c: "track-ARVR ml-4",
+        image: <ARVRlogo style={{width: "5em", height: "auto"}}/>,
+        onClick: () => this.handleShow(0),
         desc:
           "Augmented reality (AR) adds digital elements to a live view often by using the camera on a smartphone. Examples of augmented reality experiences include Snapchat lenses and the game Pokemon Go. Virtual reality (VR) implies a complete immersion experience that shuts out the physical world",
       },
       {
         name: "Blockchain",
-        show: this.state.showBC,
+        show: false,
         color: "#4285F4",
+        c: "track-BC ml-5",
+        image: <BlockchainLogo style={{width: "5em", height: "auto"}}/>,
+        onClick: () => this.handleShow(1),
         desc:
           "Blockchain is a system of recording information in a way that makes it difficult or impossible to change, hack, or cheat the system. A blockchain is essentially a digital ledger of transactions that is duplicated and distributed across the entire network of computer systems on the blockchain.",
       },
       {
+        name: "AI/ML",
+        show: false,
+        color: "#DB4437",
+        c: "track-ml",
+        image: <MLlogo style={{width: "5em", height: "auto"}}/>,
+        onClick: () => this.handleShow(2),
+        desc:
+          "Artificial Intelligence (AI) and Machine Learning (ML) are two very hot buzzwords right now, and often seem to be used interchangeably. ... Machine Learning is a current application of AI based around the idea that we should really just be able to give machines access to data and let them learn for themselves.",
+      },
+      {
         name: "Open Innovation",
-        show: this.state.showOI,
+        show: false,
         color: "#0F9D58",
+        c: "track-OI ml-5",
+        image: <OIlogo style={{width: "5em", height: "auto"}}/>,
+        onClick: () => this.handleShow(3),
         desc:
           "Open innovation is “the use of purposive inflows and outflows of knowledge to accelerate internal innovation, and expand the markets for external use of innovation, respectively.”",
       },
     ];
+  }
+
+  handleClose = () => {
+    let trackVisible = []
+    Array.prototype.push.apply(trackVisible, [false, false, false, false])
+    this.setState({
+      trackVisible
+    });
+  };
+
+  handleShow = (i) => {
+    let trackVisible = this.state.trackVisible;
+    trackVisible[i] = true;
+    this.setState({trackVisible})
+  };
+
+  render() {
     return (
       <Container
         fluid
@@ -125,148 +113,49 @@ class Tracks extends Component {
             </span>
           </Col>
         </Row>
-
-        <Container
-          style={{
-            border: "2px",
-            cursor: "pointer",
-            background: "#fff",
-            position: "absolute",
-            top: "-330px",
-            right: `${this.hgml}px`,
-            borderRadius: "50%",
-            width: "130px",
-            height: "130px",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-          className="track-ml"
-          onClick={() => this.handleShow("ML")}
-        >
-          <div className="track-img">
-            <MLlogo style={{height: "50px", width: "50px"}}/>
-            <h4
-              style={{color: "black", fontSize: "15px"}}
-              className="mt-3 text-center"
+        <Row className="justify-content-center">
+          {this.tracks.map((track, index) => <Col xl={2} className="pl-5" key={index}>
+            <div
+              style={{
+                boxShadow: "0 2px 10px #111",
+                position: "fixed",
+                top: "-10em",
+                cursor: "pointer",
+                background: "#fff",
+                borderRadius: "50%",
+                display: "flex",
+                width: "10em",
+                height: "10em",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+              className={track.c}
+              onClick={() => {
+                track.onClick()
+              }}
             >
-              AI/ML
-            </h4>
-          </div>
-        </Container>
+              <div className="track-img text-center">
+                {track.image}
+                <h4
+                  style={{color: "black", fontSize: 15, fontFamily: "Blockletter"}}
+                  className="mt-3 text-center"
+                >
+                  {track.name}
+                </h4>
+              </div>
+            </div>
+          </Col>)}
+        </Row>
 
-        <Container
-          style={{
-            border: "2px",
-            background: "#fff",
-            cursor: "pointer",
-            position: "absolute",
-            top: "-330px",
-            right: `${this.hgARVR}px`,
-            borderRadius: "50%",
-            width: "130px",
-            height: "130px",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-          className="track-ARVR"
-          onClick={() => this.handleShow("AR/VR")}
-        >
-          <div className="track-img">
-            <ARVRlogo style={{height: "50px", width: "50px"}}/>
-            <h4
-              style={{color: "black", fontSize: "15px"}}
-              className="mt-3 text-center"
-            >
-              AR/VR
-            </h4>
-          </div>
-        </Container>
-
-        <Container
-          style={{
-            border: "2px",
-            background: "#fff",
-            cursor: "pointer",
-            position: "absolute",
-            top: "-330px",
-            right: `${this.hgBC}px`,
-            borderRadius: "50%",
-            width: "130px",
-            height: "130px",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-          className="track-BC"
-          onClick={() => this.handleShow("BC")}
-        >
-          <div className="track-img text-center">
-            <BlockchainLogo style={{height: "50px", width: "50px"}}/>
-            <h4
-              style={{color: "black", fontSize: "15px"}}
-              className="mt-3 text-center"
-            >
-              Blockchain
-            </h4>
-          </div>
-        </Container>
-
-        <Container
-          style={{
-            border: "2px",
-            background: "#fff",
-            cursor: "pointer",
-            position: "absolute",
-            top: "-330px",
-            right: `${this.hgOI}px`,
-            borderRadius: "50%",
-            width: "130px",
-            height: "130px",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-          className="track-OI"
-          onClick={() => this.handleShow("OI")}
-        >
-          <div className="track-img text-center">
-            <OIlogo
-              className="mt-3"
-              style={{height: "50px", width: "50px"}}
-            />
-            <h5
-              style={{color: "black", fontSize: "15px"}}
-              className="mt-2 text-center"
-            >
-              Open Innovation
-            </h5>
-          </div>
-        </Container>
-
-        {tracks.map((track) => (
+        {this.tracks.map((track, index) => (
           <TrackModal
-            show={track.show}
+            show={this.state.trackVisible[index]}
             title={track.name}
             desc={track.desc}
             color={track.color}
             handleClose={this.handleClose}
           />
         ))}
-
-        {/* <TrackModal
-          show={this.state.showML}
-          title={"AI/Ml"}
-          desc={"AI/Ml is dope"}
-          handleClose={this.handleClose}
-        />
-        <TrackModal
-          show={this.state.showARVR}
-          title={"AR/Vr"}
-          desc={"AR/VR is dope"}
-          handleClose={this.handleClose}
-        /> */}
       </Container>
     );
   }
