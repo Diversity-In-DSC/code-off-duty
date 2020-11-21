@@ -7,38 +7,38 @@ import "../css/FAQ.css"
 import {WindupChildren} from "windups";
 
 class FAQ extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            FAQData: FAQData
-        }
+  constructor(props) {
+    super(props);
+    this.state = {
+      FAQData: FAQData
     }
+  }
 
   render() {
     return (
       <Container fluid className="fixed-top px-5" style={this.props.style} id="faq-section">
         <Row className="h-100 fixed-top">
           <Col>
-              <Row className="mx-5 align-items-center mt-4">
-                  <Col xl={1} className="my-auto ml-5" onClick={() => {
-                      this.props.goBack("faq")
-                  }}>
-                      <svg width="2em" height="2em" viewBox="0 0 13 10"
-                           style={{
-                               stroke: "#fff",
-                               fill: "none",
-                               strokeWidth: 2,
-                               transform: "rotateY(180deg)",
-                               cursor: "pointer"
-                           }}>
-                          <path d="M1,5 L11,5"/>
-                          <polyline points="8 1 12 5 8 9"/>
-                      </svg>
-                  </Col>
-                  <Col xl={2} className="p-0 ml-5">
-                      <span style={{fontFamily: "Blockletter", fontSize: 42}}>FAQs</span>
-                  </Col>
-              </Row>
+            <Row className="mx-5 align-items-center mt-4">
+              <Col xl={1} className="my-auto ml-5" onClick={() => {
+                this.props.goBack("faq")
+              }}>
+                <svg width="2em" height="2em" viewBox="0 0 13 10"
+                     style={{
+                       stroke: "#fff",
+                       fill: "none",
+                       strokeWidth: 2,
+                       transform: "rotateY(180deg)",
+                       cursor: "pointer"
+                     }}>
+                  <path d="M1,5 L11,5"/>
+                  <polyline points="8 1 12 5 8 9"/>
+                </svg>
+              </Col>
+              <Col xl={2} className="p-0 ml-5">
+                <span style={{fontFamily: "Blockletter", fontSize: 42}}>FAQs</span>
+              </Col>
+            </Row>
 
           </Col>
             <Col  style={{
