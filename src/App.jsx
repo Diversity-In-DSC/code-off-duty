@@ -5,6 +5,7 @@ import {ReactComponent as TracksMap} from "./assets/img/tracks.svg";
 import {ReactComponent as FAQIcon} from "./assets/img/faq.svg";
 import {ReactComponent as PrizesMedal} from "./assets/img/prizes.svg";
 import {ReactComponent as InfoTent} from "./assets/img/home.svg";
+import {ReactComponent as Arrow} from "./assets/img/arrow.svg";
 
 import {Col, Container, Row} from "react-bootstrap";
 
@@ -15,7 +16,7 @@ import Prizes from "./sections/Prizes";
 import FAQ from "./sections/FAQ";
 import Information from "./sections/Information";
 import SmjComponent from "./components/SMJComponent";
-import { disableScroll, enableScroll } from "./global";
+import {disableScroll, enableScroll} from "./global";
 
 class App extends React.Component {
   constructor(props) {
@@ -43,7 +44,7 @@ class App extends React.Component {
               "tracks",
               {
                 rotate: "0deg",
-                translate: { x: "3.2em", y: "2.8em" },
+                translate: {x: "3.2em", y: "2.8em"},
                 scale: 10,
                 opacity: 0.8,
               },
@@ -98,7 +99,7 @@ class App extends React.Component {
           titleID: "prizes-title",
           image: (
             <PrizesMedal
-              style={{ background: "none", width: "100%", height: "100%" }}
+              style={{background: "none", width: "100%", height: "100%"}}
               className="ml-4"
             />
           ),
@@ -130,7 +131,7 @@ class App extends React.Component {
               },
               direction
             );
-              disableScroll();
+            disableScroll();
           },
           title: "FAQs",
           class: "faq",
@@ -194,6 +195,20 @@ class App extends React.Component {
       duration: 1500,
       autoplay: true,
     });
+
+    const arrowTime = anime.timeline({
+      easing: "easeOutBounce",
+      duration: 1500,
+      autoplay: true,
+      direction: "alternate",
+      loop: true
+    })
+
+    arrowTime.add({
+      targets: "#down-arrow",
+      translateX: "10em"
+    });
+
     const t2 = anime.timeline({
       easing: "easeInOutExpo",
       duration: 1500,
@@ -204,7 +219,7 @@ class App extends React.Component {
       targets: "#jet-plane > svg",
       opacity: 0.18,
       top: 50,
-    });
+    })
 
     t2.add({
       targets: sections,
@@ -319,12 +334,7 @@ class App extends React.Component {
           opacity: "0",
         },
         300
-      );
-    // .add({
-    //   targets: ".revealing-soon",
-    //   keyframes: [{ translateY: "-90vh" }],
-    //   opacity: "0",
-    // });
+      )
   }
 
   showSection(selector, transforms, direction) {
@@ -410,74 +420,80 @@ class App extends React.Component {
         }}
       >
         <Container fluid style={{fontFamily: "Blockletter", color: "white"}}>
-            <div id="main-div" className="main-div">
-                <Row
-                    className="justify-content-center cod-title"
-                    style={{marginTop: "20vh"}}
-                >
-                    <h1
-                        style={{
-                            fontSize: 100,
-                            textShadow: "0px 1px 6px #fff",
-                            zIndex: 1,
-                        }}
-                        className="m-0"
+          <div id="main-div" className="main-div">
+            <Row
+              className="justify-content-center cod-title"
+              style={{marginTop: "20vh"}}
+            >
+              <h1
+                style={{
+                  fontSize: 100,
+                  textShadow: "0px 1px 6px #fff",
+                  zIndex: 1,
+                }}
+                className="m-0"
+              >
+                code-off duty
+              </h1>
+            </Row>
+            <Row className="justify-content-center" id="jet-plane">
+              <JetPlane
+                style={{
+                  top: window.innerHeight,
+                  position: "absolute",
+                  background: "transparent",
+                }}
+              />
+            </Row>
+            <Row className="px-5 mx-5 bg-transparent h-100 align-content-between"
+                 style={{position: "absolute", top: 0}}>
+              <Row className="justify-content-between">
+                {this.homeSections.firstRow.map((section, index) => (
+                  <Col key={index} xl={2} className="p-4">
+                    <Row
+                      className={`justify-content-center ${section.class}`}
+                      id="section"
+                      style={{opacity: 0}}
+                      onClick={() => section.onClick("normal")}
                     >
-                        code-off duty
-                    </h1>
-                </Row>
-                <Row className="justify-content-center" id="jet-plane">
-                    <JetPlane
-                        style={{
-                            top: window.innerHeight,
-                            position: "fixed",
-                            background: "transparent",
-                        }}
-                    />
-                </Row>
-                <Row className="px-5 mx-5 bg-transparent h-100 fixed-top align-content-between">
-                    <Row className="justify-content-between">
-                        {this.homeSections.firstRow.map((section, index) => (
-                            <Col key={index} xl={2} className="p-4">
-                                <Row
-                                    className={`justify-content-center ${section.class}`}
-                                    id="section"
-                                    style={{ opacity: 0 }}
-                                    onClick={() => section.onClick("normal")}
-                                >
-                                    {section.image}
-                                    <h2 className="mt-3 ml-4" id={section.titleID}>
-                                        {section.title}
-                                    </h2>
-                                </Row>
-                            </Col>
-                        ))}
+                      {section.image}
+                      <h2 className="mt-3 ml-4" id={section.titleID}>
+                        {section.title}
+                      </h2>
                     </Row>
-                    <Row className="justify-content-center mt-5 cod-register w-100">
-                        <ButtonHover label="register now"/>
+                  </Col>
+                ))}
+              </Row>
+              <Row className="justify-content-center mt-5 cod-register w-100">
+                <ButtonHover label="apply with devfolio"/>
+              </Row>
+              <Row className="w-100 justify-content-center mt-5 px-5">
+                <Col xl={1}>
+                  <Arrow style={{transform: "rotate(90deg)"}} fill="rgb(0, 255, 70)" id="down-arrow" strokeWidth={2} />
+                </Col>
+              </Row>
+              <Row className="justify-content-between">
+                {this.homeSections.secondRow.map((section, index) => (
+                  <Col key={index} xl={2} className="p-4">
+                    <Row
+                      className={`justify-content-center ${section.class}`}
+                      id="section"
+                      style={{opacity: 0}}
+                      onClick={() => section.onClick("normal")}
+                    >
+                      {section.image}
+                      <h2 className="mt-3" id={section.titleID}>
+                        {section.title}
+                      </h2>
                     </Row>
-                    <Row className="justify-content-between">
-                        {this.homeSections.secondRow.map((section, index) => (
-                            <Col key={index} xl={2} className="p-4">
-                                <Row
-                                    className={`justify-content-center ${section.class}`}
-                                    id="section"
-                                    style={{opacity: 0}}
-                                    onClick={() => section.onClick("normal")}
-                                >
-                                    {section.image}
-                                    <h2 className="mt-3" id={section.titleID}>
-                                        {section.title}
-                                    </h2>
-                                </Row>
-                            </Col>
-                        ))}
-                    </Row>
-                </Row>
-            </div>
-            <div id="smj" style={{zIndex: 999, marginTop: "80vh" }}>
-                <SmjComponent />
-            </div>
+                  </Col>
+                ))}
+              </Row>
+            </Row>
+          </div>
+          <div id="smj" style={{marginTop: "75vh"}}>
+            <SmjComponent/>
+          </div>
         </Container>
         <Tracks
           style={{opacity: 0, display: "none"}}

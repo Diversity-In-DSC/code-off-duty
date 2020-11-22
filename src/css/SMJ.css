@@ -1,0 +1,21 @@
+.smj ul > li > a {
+	background-color: white;
+	color: red;
+}
+.smj ul > li > a:hover {
+	background-color: pink;
+}
+
+/* Active tab */
+.smj ul > li.active > a,
+.smj ul > li.active > a:hover,
+.smj ul > li.active > a:focus {
+	background-color: red;
+	color: white;
+}
+
+/* Disabled tab */
+.smj ul > li.disabled > a {
+	background-color: lightgray;
+	color: darkgray;
+}

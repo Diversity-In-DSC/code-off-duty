@@ -26,8 +26,8 @@ const speakersData = [
     },
     {
         name: "Ada Rose Cannon",
-        linkedIn: "hhttps://uk.linkedin.com/in/adarose",
-        img: "https://media-exp1.licdn.com/dms/image/C4D03AQGB9Ch3pC_q4w/profile-displayphoto-shrink_800_800/0?e=1611792000&v=beta&t=IbEb2i4uf75hAqi73Mkf9WwYhZVL9nDvChvUhnkOAtA"
+        linkedIn: "https://uk.linkedin.com/in/adarose",
+        img: "https://media.discordapp.net/attachments/753262993663328406/780084923406876672/mOemByhzGrtkbP8BlgKoHbdLylcAAAAASUVORK5CYII.png"
     }
 ]
 

@@ -3,7 +3,6 @@ export const disableScroll = () => {
     window.pageYOffset || document.documentElement.scrollTop;
   const scrollLeft =
     window.pageXOffset || document.documentElement.scrollLeft;
-
   window.onscroll = function () {
     window.scrollTo(scrollLeft, scrollTop);
   }
@@ -12,7 +11,7 @@ export const disableScroll = () => {
 export const enableScroll = () => {
   let lastScrollTop = 0;
   window.onscroll = () => {
-    var st = window.pageYOffset || document.documentElement.scrollTop;
+    let st = window.pageYOffset || document.documentElement.scrollTop;
     const totalScroll = document.documentElement.scrollTop;
     const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     const scroll = `${totalScroll / windowHeight}`;
@@ -22,9 +21,9 @@ export const enableScroll = () => {
       })
       console.log("Hide")
       document.getElementById("main-div").style.opacity = 1 - scroll;
-      if (scroll > 0.8) {
+      if (scroll > .9) {
+        document.querySelector("#smj").style.zIndex = Infinity
       }
-      console.log(scroll)
     } else {
       console.log("show")
       document.getElementById("main-div").style.opacity = 1 - scroll;
@@ -33,9 +32,7 @@ export const enableScroll = () => {
           section.style.pointerEvents = "auto";
         })
       }
-      console.log(scroll)
     }
-
-    lastScrollTop = st <= 0 ? 0 : st; 
+    lastScrollTop = st <= 0 ? 0 : st;
   }
 };
