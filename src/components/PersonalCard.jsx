@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Card, Row} from "react-bootstrap";
+import {Card} from "react-bootstrap";
 import {ReactComponent as PersonalImg} from "../assets/img/032-soldier.svg";
 import {ReactComponent as LinkedIn} from "../assets/img/linkedin.svg";
 import "../css/PersonalCard.css"

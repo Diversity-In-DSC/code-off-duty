@@ -1,4 +1,4 @@
-const spekersData = [
+const speakersData = [
     {
         name: " Sayak Paul",
         linkedIn: "https://www.linkedin.com/in/sayak-paul",
@@ -31,4 +31,4 @@ const spekersData = [
     }
 ]
 
-export default spekersData;
+export default speakersData;

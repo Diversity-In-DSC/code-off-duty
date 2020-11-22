@@ -15,6 +15,7 @@ import Prizes from "./sections/Prizes";
 import FAQ from "./sections/FAQ";
 import Information from "./sections/Information";
 import SmjComponent from "./components/SMJComponent";
+import { disableScroll, enableScroll } from "./global";
 
 class App extends React.Component {
   constructor(props) {
@@ -35,6 +36,7 @@ class App extends React.Component {
               },
               direction
             );
+            enableScroll();
           },
           onClick: (direction) => {
             this.showSection(
@@ -48,6 +50,7 @@ class App extends React.Component {
               direction
             );
             this.animations();
+            disableScroll();
           },
           title: "Tracks",
           class: "tracks",
@@ -75,6 +78,7 @@ class App extends React.Component {
               },
               direction
             );
+            enableScroll();
           },
           onClick: (direction) => {
             this.showSection(
@@ -87,6 +91,7 @@ class App extends React.Component {
               },
               direction
             );
+            disableScroll();
           },
           title: "Prizes",
           class: "prizes",
@@ -112,6 +117,7 @@ class App extends React.Component {
               },
               direction
             );
+            enableScroll();
           },
           onClick: (direction) => {
             this.showSection(
@@ -124,6 +130,7 @@ class App extends React.Component {
               },
               direction
             );
+              disableScroll();
           },
           title: "FAQs",
           class: "faq",
@@ -151,6 +158,7 @@ class App extends React.Component {
               },
               direction
             );
+            enableScroll();
           },
           onClick: (direction) => {
             this.showSection(
@@ -163,6 +171,7 @@ class App extends React.Component {
               },
               direction
             );
+            disableScroll();
           },
           title: "What is COD?",
           class: "info",
@@ -175,26 +184,10 @@ class App extends React.Component {
         },
       ],
     };
-
-    this.posY = window.pageYOffset;
-
-    window.onscroll = (data) => {
-        if(this.posY < window.pageYOffset) {
-            console.log("Hide")
-            this.posY = window.pageYOffset;
-            document.getElementById("main-div").style.opacity = 0;
-        } else {
-            console.log("show")
-            this.posY = window.pageYOffset;
-            document.getElementById("main-div").style.opacity = 1;
-        }
-    };
-
   }
 
-
-
   componentDidMount() {
+    enableScroll();
     const sections = document.querySelectorAll("#section");
     const t1 = anime.timeline({
       easing: "easeInOutExpo",
@@ -274,6 +267,7 @@ class App extends React.Component {
       document.querySelector(".cod-title"),
       document.querySelector(".cod-register"),
       document.querySelector(`.${selector} > h2`),
+      document.querySelector("#smj"),
     ]);
     return rest;
   }
@@ -481,7 +475,7 @@ class App extends React.Component {
                     </Row>
                 </Row>
             </div>
-            <div id="section" style={{zIndex: 999, marginTop: "80vh" }}>
+            <div id="smj" style={{zIndex: 999, marginTop: "80vh" }}>
                 <SmjComponent />
             </div>
         </Container>
