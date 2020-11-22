@@ -14,13 +14,14 @@ import Tracks from "./sections/Tracks";
 import Prizes from "./sections/Prizes";
 import FAQ from "./sections/FAQ";
 import Information from "./sections/Information";
+import SmjComponent from "./components/SMJComponent";
+import { disableScroll, enableScroll } from "./global";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.showSection = this.showSection.bind(this);
     this.goBack = this.goBack.bind(this);
-
     this.homeSections = {
       firstRow: [
         {
@@ -35,6 +36,7 @@ class App extends React.Component {
               },
               direction
             );
+            enableScroll();
           },
           onClick: (direction) => {
             this.showSection(
@@ -48,6 +50,7 @@ class App extends React.Component {
               direction
             );
             this.animations();
+            disableScroll();
           },
           title: "Tracks",
           class: "tracks",
@@ -75,6 +78,7 @@ class App extends React.Component {
               },
               direction
             );
+            enableScroll();
           },
           onClick: (direction) => {
             this.showSection(
@@ -87,6 +91,7 @@ class App extends React.Component {
               },
               direction
             );
+            disableScroll();
           },
           title: "Prizes",
           class: "prizes",
@@ -112,6 +117,7 @@ class App extends React.Component {
               },
               direction
             );
+            enableScroll();
           },
           onClick: (direction) => {
             this.showSection(
@@ -124,6 +130,7 @@ class App extends React.Component {
               },
               direction
             );
+              disableScroll();
           },
           title: "FAQs",
           class: "faq",
@@ -151,6 +158,7 @@ class App extends React.Component {
               },
               direction
             );
+            enableScroll();
           },
           onClick: (direction) => {
             this.showSection(
@@ -163,6 +171,7 @@ class App extends React.Component {
               },
               direction
             );
+            disableScroll();
           },
           title: "What is COD?",
           class: "info",
@@ -178,6 +187,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
+    enableScroll();
     const sections = document.querySelectorAll("#section");
     const t1 = anime.timeline({
       easing: "easeInOutExpo",
@@ -257,6 +267,7 @@ class App extends React.Component {
       document.querySelector(".cod-title"),
       document.querySelector(".cod-register"),
       document.querySelector(`.${selector} > h2`),
+      document.querySelector("#smj"),
     ]);
     return rest;
   }
@@ -394,71 +405,79 @@ class App extends React.Component {
     return (
       <div
         style={{fontFamily: "Poppins", color: "white", background: "#030304"}}
+        onScroll={() => {
+
+        }}
       >
         <Container fluid style={{fontFamily: "Blockletter", color: "white"}}>
-          <Row
-            className="justify-content-center cod-title"
-            style={{marginTop: "12em"}}
-          >
-            <h1
-              style={{
-                fontSize: 100,
-                textShadow: "0px 1px 6px #fff",
-                zIndex: 1,
-              }}
-              className="m-0"
-            >
-              code-off duty
-            </h1>
-          </Row>
-          <Row className="justify-content-center" id="jet-plane">
-            <JetPlane
-              style={{
-                top: window.innerHeight,
-                position: "fixed",
-                background: "transparent",
-              }}
-            />
-          </Row>
-          <Row className="px-5 mx-5 bg-transparent h-100 fixed-top align-content-between">
-            <Row className="justify-content-between">
-              {this.homeSections.firstRow.map((section, index) => (
-                <Col key={index} xl={2} className="p-4">
-                  <Row
-                    className={`justify-content-center ${section.class}`}
-                    id="section"
-                    style={{ opacity: 0 }}
-                    onClick={() => section.onClick("normal")}
-                  >
-                    {section.image}
-                    <h2 className="mt-3 ml-4" id={section.titleID}>
-                      {section.title}
-                    </h2>
-                  </Row>
-                </Col>
-              ))}
-            </Row>
-            <Row className="justify-content-center mt-5 cod-register w-100">
-              <ButtonHover label="register now"/>
-            </Row>
-            <Row className="justify-content-between">
-              {this.homeSections.secondRow.map((section, index) => (
-                <Col key={index} xl={2} className="p-4">
-                  <Row
-                    className={`justify-content-center ${section.class}`}
-                    id="section"
-                    style={{opacity: 0}}
-                    onClick={() => section.onClick("normal")}
-                  >
-                    {section.image}
-                    <h2 className="mt-3" id={section.titleID}>
-                      {section.title}
-                    </h2>
-                  </Row>
-                </Col>
-              ))}
-            </Row>
-          </Row>
+            <div id="main-div" className="main-div">
+                <Row
+                    className="justify-content-center cod-title"
+                    style={{marginTop: "20vh"}}
+                >
+                    <h1
+                        style={{
+                            fontSize: 100,
+                            textShadow: "0px 1px 6px #fff",
+                            zIndex: 1,
+                        }}
+                        className="m-0"
+                    >
+                        code-off duty
+                    </h1>
+                </Row>
+                <Row className="justify-content-center" id="jet-plane">
+                    <JetPlane
+                        style={{
+                            top: window.innerHeight,
+                            position: "fixed",
+                            background: "transparent",
+                        }}
+                    />
+                </Row>
+                <Row className="px-5 mx-5 bg-transparent h-100 fixed-top align-content-between">
+                    <Row className="justify-content-between">
+                        {this.homeSections.firstRow.map((section, index) => (
+                            <Col key={index} xl={2} className="p-4">
+                                <Row
+                                    className={`justify-content-center ${section.class}`}
+                                    id="section"
+                                    style={{ opacity: 0 }}
+                                    onClick={() => section.onClick("normal")}
+                                >
+                                    {section.image}
+                                    <h2 className="mt-3 ml-4" id={section.titleID}>
+                                        {section.title}
+                                    </h2>
+                                </Row>
+                            </Col>
+                        ))}
+                    </Row>
+                    <Row className="justify-content-center mt-5 cod-register w-100">
+                        <ButtonHover label="register now"/>
+                    </Row>
+                    <Row className="justify-content-between">
+                        {this.homeSections.secondRow.map((section, index) => (
+                            <Col key={index} xl={2} className="p-4">
+                                <Row
+                                    className={`justify-content-center ${section.class}`}
+                                    id="section"
+                                    style={{opacity: 0}}
+                                    onClick={() => section.onClick("normal")}
+                                >
+                                    {section.image}
+                                    <h2 className="mt-3" id={section.titleID}>
+                                        {section.title}
+                                    </h2>
+                                </Row>
+                            </Col>
+                        ))}
+                    </Row>
+                </Row>
+            </div>
+            <div id="smj" style={{zIndex: 999, marginTop: "80vh" }}>
+                <SmjComponent />
+            </div>
         </Container>
         <Tracks
           style={{opacity: 0, display: "none"}}
