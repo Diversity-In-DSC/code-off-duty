@@ -22,7 +22,7 @@ class FAQ extends Component {
         style={this.props.style}
         id="faq-section"
       >
-        <Row>
+        <Row className="h-100 fixed-top">
           <Col>
             <Row className="mx-5 align-items-center mt-4">
               <Col
@@ -56,95 +56,98 @@ class FAQ extends Component {
             </Row>
           </Col>
           <Col
-            className="mt-5"
+            className="mr-5"
             style={{
               backgroundColor: "rgba(0, 0, 0, 0)",
-              paddingTop: "5%",
             }}
           >
-            <Accordion as={Col} className="mt-2">
-              {this.state.FAQData.map((data, number) => (
-                <Card
-                  style={{
-                    backgroundColor: "rgba(0, 0, 0, 0)",
-                    borderColor: "rgba(0, 200, 70, 0.5)",
-                  }}
-                >
-                  <Accordion.Toggle
-                    as={Card.Header}
-                    eventKey={number.toString()}
-                    onClick={() => {
-                      let fqaData = this.state.FAQData;
-                      fqaData.forEach((d, index) => {
-                        d.played = index === number ? !d.played : false;
-                      });
-                      this.setState({ FAQData: fqaData });
-                    }}
+            <Row className="h-100 align-items-center">
+              <Accordion as={Col}>
+                {this.state.FAQData.map((data, number) => (
+                  <Card
                     style={{
-                      borderBottomColor: "rgba(0, 200, 70, 0.5)",
-                      borderBottomStyle: "dashed",
+                      backgroundColor: "rgba(0, 0, 0, 0)",
+                      borderColor: "rgba(0, 200, 70, 0.5)",
                     }}
                   >
-                    <Row>
-                      <Col sm={11}>
+                    <Accordion.Toggle
+                      as={Card.Header}
+                      eventKey={number.toString()}
+                      onClick={() => {
+                        let fqaData = this.state.FAQData;
+                        fqaData.forEach((d, index) => {
+                          d.played = index === number ? !d.played : false;
+                        });
+                        this.setState({ FAQData: fqaData });
+                      }}
+                      style={{
+                        borderBottomColor: "rgba(0, 200, 70, 0.5)",
+                        borderBottomStyle: "dashed",
+                      }}
+                    >
+                      <Row>
+                        <Col sm={11}>
+                          <h5>
+                            <span style={{ fontFamily: "Blockletter" }}>
+                              Question
+                            </span>
+                            <span
+                              style={{ fontFamily: "Poppins", fontSize: 18 }}
+                            >
+                              {" " + data.question}
+                            </span>
+                          </h5>
+                        </Col>
+                        <Col>
+                          {!data.played ? (
+                            <PlayBtn style={{ width: 20, height: 20 }} />
+                          ) : (
+                            <RePlayBtn
+                              style={{
+                                width: 20,
+                                height: 20,
+                                animationName: "rotate-object",
+                                animationDuration: "1s",
+                                animationIterationCount: 1,
+                                transitionTimingFunction: "ease-in",
+                              }}
+                            />
+                          )}
+                        </Col>
+                      </Row>
+                    </Accordion.Toggle>
+                    <Accordion.Collapse eventKey={number.toString()}>
+                      <Card.Body>
                         <h5>
                           <span style={{ fontFamily: "Blockletter" }}>
-                            Question
+                            Answer
                           </span>
-                          <snap style={{ fontFamily: "Poppins", fontSize: 18 }}>
-                            {" " + data.question}
-                          </snap>
-                        </h5>
-                      </Col>
-                      <Col>
-                        {!data.played ? (
-                          <PlayBtn style={{ width: 20, height: 20 }} />
-                        ) : (
-                          <RePlayBtn
+                          <span
                             style={{
-                              width: 20,
-                              height: 20,
-                              animationName: "rotate-object",
-                              animationDuration: "1s",
-                              animationIterationCount: 1,
-                              transitionTimingFunction: "ease-in",
+                              fontFamily: "Poppins",
+                              fontSize: 18,
                             }}
-                          />
-                        )}
-                      </Col>
-                    </Row>
-                  </Accordion.Toggle>
-                  <Accordion.Collapse eventKey={number.toString()}>
-                    <Card.Body>
-                      <h5>
-                        <span style={{ fontFamily: "Blockletter" }}>
-                          Answer
-                        </span>
-                        <snap
-                          style={{
-                            fontFamily: "Poppins",
-                            fontSize: 18,
-                          }}
-                        >
-                          {data.played && (
-                            <WindupChildren speed={500}>
-                              {" " + data.answer}
-                            </WindupChildren>
-                          )}
-                        </snap>
-                        <snap
-                          style={{
-                            animation: "blink 0.9s infinite",
-                          }}
-                        >
-                          |
-                        </snap>
-                      </h5>
-                    </Card.Body>
-                  </Accordion.Collapse>
-                </Card>
-              ))}
-            </Accordion>
+                          >
+                            {data.played && (
+                              <WindupChildren speed={500}>
+                                {" " + data.answer}
+                              </WindupChildren>
+                            )}
+                          </span>
+                          <span
+                            style={{
+                              animation: "blink 0.9s infinite",
+                            }}
+                          >
+                            |
+                          </span>
+                        </h5>
+                      </Card.Body>
+                    </Accordion.Collapse>
+                  </Card>
+                ))}
+              </Accordion>
+            </Row>
           </Col>
         </Row>
       </Container>

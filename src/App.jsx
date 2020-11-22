@@ -47,6 +47,7 @@ class App extends React.Component {
               },
               direction
             );
+            this.animations();
           },
           title: "Tracks",
           class: "tracks",
@@ -90,13 +91,8 @@ class App extends React.Component {
           title: "Prizes",
           class: "prizes",
           titleID: "prizes-title",
-          image: (
-            <PrizesMedal
-              style={{ background: "none", width: "100%", height: "100%" }}
-              className="ml-3"
-            />
-          ),
-        },
+          image: <PrizesMedal style={{background: "none", width: "100%", height: "100%"}} className="ml-4"/>
+        }
       ],
       secondRow: [
         {
@@ -211,14 +207,14 @@ class App extends React.Component {
       delay: "1000",
       duration: "1000",
       targets: ".track-ml",
-      keyframes: [{ translateY: "400px" }],
+      translateY: "25vh",
       opacity: "1",
     })
       .add(
         {
           delay: "1000",
           targets: ".track-ARVR",
-          keyframes: [{ translateY: "600px" }],
+          keyframes: [{ translateY: "50vh" }],
           opacity: "1",
         },
         600
@@ -227,7 +223,7 @@ class App extends React.Component {
         {
           delay: "1000",
           targets: ".track-BC",
-          keyframes: [{ translateY: "850px" }],
+          keyframes: [{ translateY: "75vh" }],
           opacity: "1",
         },
         800
@@ -236,13 +232,13 @@ class App extends React.Component {
         {
           delay: "1000",
           targets: ".track-OI",
-          keyframes: [{ translateY: "900px" }],
+          keyframes: [{ translateY: "90vh" }],
           opacity: "1",
         },
         1200
       );
 
-    document.querySelector(".tracks").onClick = t5.play;
+    document.querySelector(".tracks").onClick = t5.play();
   };
 
   getOtherSections(selector) {
@@ -261,7 +257,6 @@ class App extends React.Component {
   }
 
   goBack(selector, firstRow) {
-    console.log(selector);
     if (firstRow) {
       const section = this.homeSections.firstRow.filter(
         (s) => s.class === selector
@@ -273,6 +268,7 @@ class App extends React.Component {
       )[0];
       section.reverseAnimation("reverse");
     }
+
     const t6 = anime.timeline({
       easing: "easeInOutQuad",
       duration: 750,
@@ -281,13 +277,13 @@ class App extends React.Component {
 
     t6.add({
       targets: ".track-ml",
-      keyframes: [{ translateY: "-400px" }],
+      keyframes: [{ translateY: "-10em" }],
       opacity: "0",
     })
       .add(
         {
           targets: ".track-ARVR",
-          keyframes: [{ translateY: "-600px" }],
+          keyframes: [{ translateY: "-10em" }],
           opacity: "0",
         },
         100
@@ -295,7 +291,7 @@ class App extends React.Component {
       .add(
         {
           targets: ".track-BC",
-          keyframes: [{ translateY: "-850px" }],
+          keyframes: [{ translateY: "-10em" }],
           opacity: "0",
         },
         200
@@ -303,7 +299,7 @@ class App extends React.Component {
       .add(
         {
           targets: ".track-OI",
-          keyframes: [{ translateY: "-900px" }],
+          keyframes: [{ translateY: "-10em" }],
           opacity: "0",
         },
         300
@@ -342,24 +338,6 @@ class App extends React.Component {
       duration: 1500,
       autoplay: true,
     });
-
-    // const t6 = anime.timeline({
-    //   easing: "easeInOutQuad",
-    //   duration: 1500,
-    //   autoplay: true,
-    // });
-
-    // const t7 = anime.timeline({
-    //   easing: "easeInOutQuad",
-    //   duration: 1500,
-    //   autoplay: true,
-    // });
-
-    // const t8 = anime.timeline({
-    //   easing: "easeInOutQuad",
-    //   duration: 1500,
-    //   autoplay: true,
-    // });
 
     t1.add({
       targets: `.${selector} > svg`,
@@ -424,33 +402,19 @@ class App extends React.Component {
           </Row>
           <Row className="justify-content-center" id="jet-plane">
             <JetPlane
-              style={{
-                top: window.innerHeight,
-                position: "fixed",
-                background: "transparent",
-              }}
-            />
+                style={{top: window.innerHeight, position: "fixed", background: "transparent"}}/>
           </Row>
           <Row className="px-5 mx-5 bg-transparent h-100 fixed-top align-content-between">
             <Row className="justify-content-between">
-              {this.homeSections.firstRow.map((section, index) => (
-                <Col key={index} xl={2} className="p-4">
-                  <Row
-                    className={`justify-content-center ${section.class}`}
-                    id="section"
-                    style={{ opacity: 0 }}
-                    onClick={() => {
-                      section.onClick("normal");
-                      index === 0 ? this.animations() : null;
-                    }}
-                  >
-                    {section.image}
-                    <h2 className="mt-3 ml-3" id={section.titleID}>
-                      {section.title}
-                    </h2>
-                  </Row>
-                </Col>
-              ))}
+              {this.homeSections.firstRow.map((section, index) => <Col key={index} xl={2}
+                                                                       className="p-4">
+                <Row className={`justify-content-center ${section.class}`} id="section" style={{opacity: 0}}
+                     onClick={() => section.onClick("normal")}
+                >
+                  {section.image}
+                  <h2 className="mt-3 ml-4" id={section.titleID}>{section.title}</h2>
+                </Row>
+              </Col>)}
             </Row>
             <Row className="justify-content-between">
               {this.homeSections.secondRow.map((section, index) => (

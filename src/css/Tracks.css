@@ -1,0 +1,10 @@
+.track {
+	cursor: pointer;
+	background: #fff;
+	border-radius: 50%;
+	display: flex;
+	width: 10em;
+	height: 10em;
+	justify-content: center;
+	align-items: center;
+}
