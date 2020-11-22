@@ -343,6 +343,7 @@ class App extends React.Component {
     const target = document.querySelector(`.${selector} > svg`);
     const targetSection = document.querySelector(`#${selector}-section`);
     targetSection.style.display = "block";
+    target.style.zIndex = 3
     target.style.cursor = direction === "normal" ? "default" : "pointer";
     const jet = document.querySelector("#jet-plane > svg");
 
@@ -377,7 +378,10 @@ class App extends React.Component {
       translateX: transforms.translate.x,
       translateY: transforms.translate.y,
       opacity: transforms.opacity,
-    });
+    }).add({
+      targets: "#down-arrow",
+      opacity: direction === "normal" ? 0 : 1
+    }, 0);
 
     t2.add({
       targets: [`#${selector}-section`],
@@ -467,9 +471,9 @@ class App extends React.Component {
               <Row className="justify-content-center mt-5 cod-register w-100">
                 <ButtonHover label="apply with devfolio"/>
               </Row>
-              <Row className="w-100 justify-content-center mt-5 px-5">
+              <Row className="w-100 justify-content-center mt-5 px-5" style={{zIndex: 1}}>
                 <Col xl={1}>
-                  <Arrow style={{transform: "rotate(90deg)"}} fill="rgb(0, 255, 70)" id="down-arrow" strokeWidth={2} />
+                  <Arrow style={{transform: "rotate(90deg)"}} fill="rgb(0, 255, 70)" id="down-arrow" strokeWidth={2}/>
                 </Col>
               </Row>
               <Row className="justify-content-between">
