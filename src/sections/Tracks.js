@@ -117,7 +117,7 @@ class Tracks extends Component {
           {this.tracks.map((track, index) => <Col xl={2} className="pl-5" key={index}>
             <div
               style={{
-                boxShadow: "0 2px 10px #111",
+                boxShadow: "0 1px 10px #888",
                 position: "fixed",
                 top: "-10em",
                 cursor: "pointer",

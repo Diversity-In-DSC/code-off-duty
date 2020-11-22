@@ -1,12 +1,12 @@
 import React from "react";
 import "./App.css";
-import { ReactComponent as JetPlane } from "./assets/img/jet.svg";
-import { ReactComponent as TracksMap } from "./assets/img/tracks.svg";
-import { ReactComponent as FAQIcon } from "./assets/img/faq.svg";
-import { ReactComponent as PrizesMedal } from "./assets/img/prizes.svg";
-import { ReactComponent as InfoTent } from "./assets/img/home.svg";
+import {ReactComponent as JetPlane} from "./assets/img/jet.svg";
+import {ReactComponent as TracksMap} from "./assets/img/tracks.svg";
+import {ReactComponent as FAQIcon} from "./assets/img/faq.svg";
+import {ReactComponent as PrizesMedal} from "./assets/img/prizes.svg";
+import {ReactComponent as InfoTent} from "./assets/img/home.svg";
 
-import { Col, Container, Row } from "react-bootstrap";
+import {Col, Container, Row} from "react-bootstrap";
 
 import anime from "animejs/lib/anime.es";
 import ButtonHover from "./components/Button";
@@ -29,7 +29,7 @@ class App extends React.Component {
               "tracks",
               {
                 rotate: "-30deg",
-                translate: { x: "0%", y: "0%" },
+                translate: {x: "0", y: "0"},
                 scale: 1,
                 opacity: 1,
               },
@@ -41,7 +41,7 @@ class App extends React.Component {
               "tracks",
               {
                 rotate: "0deg",
-                translate: { x: "25%", y: "23%" },
+                translate: { x: "3.2em", y: "2.8em" },
                 scale: 10,
                 opacity: 0.8,
               },
@@ -69,7 +69,7 @@ class App extends React.Component {
               "prizes",
               {
                 rotate: "0deg",
-                translate: { x: "0%", y: "0%" },
+                translate: {x: "0%", y: "0%"},
                 scale: 1,
                 opacity: 1,
               },
@@ -81,7 +81,7 @@ class App extends React.Component {
               "prizes",
               {
                 rotate: "0deg",
-                translate: { x: "-7%", y: "20%" },
+                translate: {x: "-7%", y: "20%"},
                 scale: 3,
                 opacity: 1.0,
               },
@@ -106,7 +106,7 @@ class App extends React.Component {
               "faq",
               {
                 rotate: "30deg",
-                translate: { x: "0%", y: "0%" },
+                translate: {x: "0%", y: "0%"},
                 scale: 1,
                 opacity: 1,
               },
@@ -118,7 +118,7 @@ class App extends React.Component {
               "faq",
               {
                 rotate: "0deg",
-                translate: { x: "28%", y: "-37%" },
+                translate: {x: "28%", y: "-37%"},
                 scale: 3,
                 opacity: 1.0,
               },
@@ -145,7 +145,7 @@ class App extends React.Component {
               "info",
               {
                 rotate: "0deg",
-                translate: { x: "0%", y: "0%" },
+                translate: {x: "0%", y: "0%"},
                 scale: 1,
                 opacity: 1,
               },
@@ -157,7 +157,7 @@ class App extends React.Component {
               "info",
               {
                 rotate: "0deg",
-                translate: { x: "-15%", y: "-20%" },
+                translate: {x: "-15%", y: "-20%"},
                 scale: 18,
                 opacity: 0.3,
               },
@@ -169,7 +169,7 @@ class App extends React.Component {
           titleID: "info-title",
           image: (
             <InfoTent
-              style={{ background: "none", width: "100%", height: "100%" }}
+              style={{background: "none", width: "100%", height: "100%"}}
             />
           ),
         },
@@ -212,14 +212,14 @@ class App extends React.Component {
       delay: "1000",
       duration: "1000",
       targets: ".track-ml",
-      translateY: "25vh",
+      translateY: "13em",
       opacity: "1",
     })
       .add(
         {
           delay: "1000",
           targets: ".track-ARVR",
-          keyframes: [{ translateY: "50vh" }],
+          keyframes: [{translateY: "25em"}],
           opacity: "1",
         },
         600
@@ -228,7 +228,7 @@ class App extends React.Component {
         {
           delay: "1000",
           targets: ".track-BC",
-          keyframes: [{ translateY: "75vh" }],
+          keyframes: [{translateY: "39em"}],
           opacity: "1",
         },
         800
@@ -237,7 +237,7 @@ class App extends React.Component {
         {
           delay: "1000",
           targets: ".track-OI",
-          keyframes: [{ translateY: "90vh" }],
+          keyframes: [{translateY: "45em"}],
           opacity: "1",
         },
         1200
@@ -282,13 +282,13 @@ class App extends React.Component {
 
     t6.add({
       targets: ".track-ml",
-      keyframes: [{ translateY: "-25vh" }],
+      keyframes: [{translateY: 0}],
       opacity: "0",
     })
       .add(
         {
           targets: ".track-ARVR",
-          keyframes: [{ translateY: "-50vh" }],
+          keyframes: [{translateY: 0}],
           opacity: "0",
         },
         100
@@ -296,7 +296,7 @@ class App extends React.Component {
       .add(
         {
           targets: ".track-BC",
-          keyframes: [{ translateY: "-75vh" }],
+          keyframes: [{translateY: 0}],
           opacity: "0",
         },
         200
@@ -304,7 +304,7 @@ class App extends React.Component {
       .add(
         {
           targets: ".track-OI",
-          keyframes: [{ translateY: "-90vh" }],
+          keyframes: [{translateY: 0}],
           opacity: "0",
         },
         300
@@ -370,7 +370,7 @@ class App extends React.Component {
     t3.add({
       targets: rest,
       opacity: direction === "normal" ? 0 : 1,
-      complete: (anim) => {
+      complete: () => {
         if (direction === "normal") {
           rest.forEach((node) => {
             node.style.pointerEvents = "none";
@@ -393,12 +393,12 @@ class App extends React.Component {
   render() {
     return (
       <div
-        style={{ fontFamily: "Poppins", color: "white", background: "#030304" }}
+        style={{fontFamily: "Poppins", color: "white", background: "#030304"}}
       >
-        <Container fluid style={{ fontFamily: "Blockletter", color: "white" }}>
+        <Container fluid style={{fontFamily: "Blockletter", color: "white"}}>
           <Row
             className="justify-content-center cod-title"
-            style={{ marginTop: "18%" }}
+            style={{marginTop: "12em"}}
           >
             <h1
               style={{
@@ -410,9 +410,6 @@ class App extends React.Component {
             >
               code-off duty
             </h1>
-          </Row>
-          <Row className="justify-content-center mt-5 cod-register">
-            <ButtonHover label="register now" />
           </Row>
           <Row className="justify-content-center" id="jet-plane">
             <JetPlane
@@ -441,13 +438,16 @@ class App extends React.Component {
                 </Col>
               ))}
             </Row>
+            <Row className="justify-content-center mt-5 cod-register w-100">
+              <ButtonHover label="register now"/>
+            </Row>
             <Row className="justify-content-between">
               {this.homeSections.secondRow.map((section, index) => (
                 <Col key={index} xl={2} className="p-4">
                   <Row
                     className={`justify-content-center ${section.class}`}
                     id="section"
-                    style={{ opacity: 0 }}
+                    style={{opacity: 0}}
                     onClick={() => section.onClick("normal")}
                   >
                     {section.image}
@@ -461,25 +461,25 @@ class App extends React.Component {
           </Row>
         </Container>
         <Tracks
-          style={{ opacity: 0, display: "none" }}
+          style={{opacity: 0, display: "none"}}
           goBack={(selector) => {
             this.goBack(selector, true);
           }}
         />
         <Prizes
-          style={{ opacity: 0, display: "none" }}
+          style={{opacity: 0, display: "none"}}
           goBack={(selector) => {
             this.goBack(selector, true);
           }}
         />
         <FAQ
-          style={{ opacity: 0, display: "none" }}
+          style={{opacity: 0, display: "none"}}
           goBack={(selector) => {
             this.goBack(selector, false);
           }}
         />
         <Information
-          style={{ opacity: 0, display: "none" }}
+          style={{opacity: 0, display: "none"}}
           goBack={(selector) => {
             this.goBack(selector, false);
           }}
