@@ -308,7 +308,12 @@ class App extends React.Component {
           opacity: "0",
         },
         300
-      );
+      )
+      .add({
+        targets: ".revealing-soon",
+        keyframes: [{ translateY: "-90vh" }],
+        opacity: "0",
+      });
   }
 
   showSection(selector, transforms, direction) {
@@ -328,7 +333,7 @@ class App extends React.Component {
 
     const t2 = anime.timeline({
       easing: "easeInOutExpo",
-      duration: 1500,
+      duration: 1000,
       autoplay: true,
     });
 
@@ -356,6 +361,10 @@ class App extends React.Component {
     t2.add({
       targets: [`#${selector}-section`],
       opacity: direction === "normal" ? 1 : 0,
+    }).add({
+      targets: ".revealing-soon",
+      translateY: "30vh",
+      easing: "easeOutBounce",
     });
 
     t3.add({
