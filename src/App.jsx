@@ -308,12 +308,12 @@ class App extends React.Component {
           opacity: "0",
         },
         300
-      )
-      .add({
-        targets: ".revealing-soon",
-        keyframes: [{ translateY: "-90vh" }],
-        opacity: "0",
-      });
+      );
+    // .add({
+    //   targets: ".revealing-soon",
+    //   keyframes: [{ translateY: "-90vh" }],
+    //   opacity: "0",
+    // });
   }
 
   showSection(selector, transforms, direction) {
