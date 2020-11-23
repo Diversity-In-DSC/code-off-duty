@@ -32,18 +32,25 @@ a {
 	transition: all 0.3s ease;
 }
 
-.cta span {
+.cta .logo {
+	position: relative;
+	stroke: white;
+	fill: white;
+	height: 24px;
+	width: 24px;
+	margin-right: 8px;
+}
+
+.cta #label {
 	color: white;
 	position: relative;
-	font-size: 16px;
 	line-height: 18px;
-	font-weight: 900;
 	letter-spacing: 0.25em;
 	text-transform: uppercase;
 	vertical-align: middle;
 }
 
-.cta svg {
+.cta .arrow {
 	position: relative;
 	top: 0;
 	margin-left: 1em;
@@ -66,9 +73,14 @@ a {
 	cursor: pointer;
 }
 
-.cta:hover svg {
+.cta:hover .arrow {
 	transform: translateX(0);
 	stroke: #000;
+}
+
+.cta:hover .logo {
+	stroke: #000;
+	fill: #000
 }
 
 .cta:active {

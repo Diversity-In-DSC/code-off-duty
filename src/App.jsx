@@ -219,7 +219,23 @@ class App extends React.Component {
       targets: "#jet-plane > svg",
       opacity: 0.18,
       top: 50,
-    })
+      complete: () => {
+        const script = document.createElement('script');
+        script.src = 'https://apply.devfolio.co';
+        script.async = true;
+        document.body.appendChild(script);
+        script.onload = () => {
+          // eslint-disable-next-line no-undef
+          new Devfolio({key: 'codeoffduty', buttonSelector: '#devfolio-apply-now'});
+        }
+      }
+    }).add({
+      targets: ".cod-register",
+      opacity: 1,
+      complete: () => {
+        document.querySelector(".cod-register").style.pointerEvents = "auto"
+      }
+    }, 1500)
 
     t2.add({
       targets: sections,
@@ -468,8 +484,15 @@ class App extends React.Component {
                   </Col>
                 ))}
               </Row>
-              <Row className="justify-content-center mt-5 cod-register w-100">
-                <ButtonHover label="apply with devfolio"/>
+              <Row className="justify-content-center mt-5 cod-register w-100" style={{opacity: 0, pointerEvents: "none"}}>
+                <ButtonHover label="apply with devfolio" onClick={() => {
+                  this.devfolio.click()
+                }}/>
+              </Row>
+              <Row>
+                <span id="devfolio-apply-now" style={{opacity: 0}} ref={(n) => {
+                  this.devfolio = n
+                }}/>
               </Row>
               <Row className="w-100 justify-content-center mt-5 px-5" style={{zIndex: 1}}>
                 <Col xl={1}>
