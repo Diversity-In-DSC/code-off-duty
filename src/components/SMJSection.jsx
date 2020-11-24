@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Col, Container, Row } from "react-bootstrap";
+import React, {Component} from 'react';
+import {Col, Container, Row} from "react-bootstrap";
 import PersonalCard from "./PersonalCard";
 
 class SmjSection extends Component {
@@ -13,7 +13,7 @@ class SmjSection extends Component {
             <Container className="mt-3">
                 <Row>
                     {this.data.map((sectionData, index) => (
-                        <Col sm={12} md={6} lg={4}>
+                        <Col xl={4}>
                             <PersonalCard data={sectionData} />
                         </Col>
                     ))}

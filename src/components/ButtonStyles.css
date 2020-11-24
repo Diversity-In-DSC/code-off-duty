@@ -1,35 +1,35 @@
 button {
-  border: none;
-  background: transparent;
+	border: none;
+	background: transparent;
 }
 
 button:focus {
-  outline-color: transparent;
+	outline-color: transparent;
 }
 
 a {
-  text-decoration: none;
-  color: inherit;
+	text-decoration: none;
+	color: inherit;
 }
 
 .cta {
-  position: relative;
-  margin: auto;
-  padding: 1.3rem 1.5rem;
-  transition: all 0.2s ease;
+	position: relative;
+	margin: auto;
+	padding: 1.3rem 1.5rem;
+	transition: all 0.2s ease;
 }
 
 .cta:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  border-radius: 35px;
-  background: rgba(0, 255, 70, 0.5);
-  width: 4rem;
-  height: 4rem;
-  transition: all 0.3s ease;
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	border-radius: 35px;
+	background: rgba(0, 255, 70, 0.5);
+	width: 4rem;
+	height: 4rem;
+	transition: all 0.3s ease;
 }
 
 .cta .logo {
@@ -64,18 +64,19 @@ a {
 }
 
 .cta:hover > #label {
-  color: black;
+	color: black;
 }
 
 .cta:hover:before {
-  width: 100%;
-  background: rgb(0, 255, 70);
-  cursor: pointer;
+	width: 100%;
+	background: rgb(0, 255, 70);
+	cursor: pointer;
 }
 
 .cta:hover .arrow {
 	transform: translateX(0);
 	stroke: #000;
+}
 
 .cta:hover .logo {
 	stroke: #000;
@@ -83,24 +84,5 @@ a {
 }
 
 .cta:active {
-  transform: scale(0.96);
-}
-
-#label {
-  font-size: 24px;
-}
-/* @media screen and (max-width: 360px) {
-  #label {
-    font-size: 18px;
-  }
-} */
-@media screen and (max-width: 375px) {
-  #label {
-    font-size: 18px;
-  }
-}
-@media screen and (max-width: 320px) {
-  #label {
-    font-size: 16px;
-  }
+	transform: scale(0.96);
 }
