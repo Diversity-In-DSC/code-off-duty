@@ -227,7 +227,7 @@ class App extends React.Component {
         document.body.appendChild(script);
         script.onload = () => {
           // eslint-disable-next-line no-undef
-          new Devfolio({key: 'codeoffduty', buttonSelector: '#devfolio-apply-now'});
+          new Devfolio({ key: 'codeoffduty', buttonSelector: '#devfolio-apply-now' });
         }
       }
     }).add({
@@ -439,18 +439,11 @@ class App extends React.Component {
     return (
       <>
         <div style={{ fontFamily: "Poppins", color: "white", background: "#030304" }} onScroll={() => { }}>
-          <Container fluid style={{ fontFamily: "Blockletter", color: "white" }} className="mx-auto">
+          <Container fluid style={{ fontFamily: "Blockletter", color: "white" }} className="mx-auto px-0">
             <div id="main-div" className="main-div">
-              <h1
-                id="heading"
-                style={{
-                  textShadow: "0px 1px 6px #fff",
-                  zIndex: 1
-                }}
-                className="text-center cod-title"
-              >
+              <h1 id="heading" style={{ textShadow: "0px 1px 6px #fff", zIndex: 1 }} className="text-center cod-title">
                 code-off duty
-            </h1>
+             </h1>
               <Row className="justify-content-center" id="jet-plane">
                 <JetPlane
                   id="jet"
@@ -460,35 +453,37 @@ class App extends React.Component {
                     background: "transparent",
                   }} />
               </Row>
-              <Row className="justify-content-center mt-5 cod-register w-100" style={{opacity: 0, pointerEvents: "none"}}>
-                <ButtonHover label="apply with devfolio" onClick={() => {
-                  this.devfolio.click()
-                }}/>
-              </Row>
-              <Row>
-                <span id="devfolio-apply-now" style={{opacity: 0}} ref={(n) => {
-                  this.devfolio = n
-                }}/>
-              </Row>
-              <Row className="w-100 justify-content-center mt-5 px-5" style={{zIndex: 1}}>
-                <Col xl={1}>
-                  <Arrow style={{transform: "rotate(90deg)"}} fill="rgb(0, 255, 70)" id="down-arrow" strokeWidth={2}/>
-                </Col>
-              </Row>
-              <Row className="justify-content-between">
-                {this.homeSections.secondRow.map((section, index) => (
-                  <Col key={index} xl={2} className="p-4">
-                    <Row
-                      className={`justify-content-center ${section.class}`}
-                      id="section"
-                      style={{opacity: 0}}
-                      onClick={() => section.onClick("normal")}
-                    >
-                      {section.image}
-                      <h2 className="mt-3" id={section.titleID}>
-                        {section.title}
-                      </h2>
-                    </Row>
+              <Row
+                className="px-md-5 mx-5 bg-transparent" id="container"
+                style={{ position: "absolute", top: 0 }}>
+                <Row className="justify-content-between" id='first-row'>
+                  {this.homeSections.firstRow.map((section, index) => (
+                    <Col key={index} xl={2} className="p-4">
+                      <Row
+                        className={`justify-content-center ${section.class}`}
+                        id="section"
+                        style={{ opacity: 0 }}
+                        onClick={() => section.onClick("normal")}>
+                        {section.image}
+                        <h2 className="mt-3" id={section.titleID}>
+                          {section.title}
+                        </h2>
+                      </Row>
+                    </Col>))}
+                </Row>
+                <Row className="justify-content-center mt-5 cod-register w-100" style={{ opacity: 0, pointerEvents: "none" }} id='btn'>
+                  <ButtonHover label="apply with devfolio" onClick={() => {
+                    this.devfolio.click()
+                  }} />
+                </Row>
+                <Row>
+                  <span id="devfolio-apply-now" style={{ opacity: 0 }} ref={(n) => {
+                    this.devfolio = n
+                  }} />
+                </Row>
+                <Row className="w-100 justify-content-center mt-5 px-5" style={{ zIndex: 1 }}>
+                  <Col xl={1}>
+                    <Arrow style={{ transform: "rotate(90deg)" }} fill="rgb(0, 255, 70)" id="down-arrow" strokeWidth={2} />
                   </Col>
                 </Row>
                 <Row className="justify-content-between" id="second-row">
@@ -511,7 +506,7 @@ class App extends React.Component {
             </div>
           </Container>
 
-          <div id='mobile' className="mx-auto">
+          <div id='mobile' className="mx-auto d-md-none">
             <div className='text-center'>
               <Col sm={10} className='mx-auto mb-5'><TracksMap className='img-svg tracks ' /><h2 className='title'>TRACKS</h2></Col>
               <Col sm={10} className='mx-auto mb-5'><FAQIcon className='img-svg' /><h2 className='title'>FAQS</h2></Col>

@@ -20,15 +20,15 @@
   font-size: 100px;
   margin-top: 20vh !important;
 }
-#mobile {
-  display: none;
+#btn {
+  align-content: center;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 767px) {
   #smj {
     margin-top: 90vh;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   #mobile {
     display: block;
     margin-top: 90vh;
@@ -43,6 +43,7 @@
   }
   #btn {
     margin-top: 87vh !important;
+    margin-left: 2px;
   }
   #jet {
     width: 320px;
