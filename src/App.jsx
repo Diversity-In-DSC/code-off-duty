@@ -1,13 +1,13 @@
 import React from "react";
 import "./App.css";
-import {ReactComponent as JetPlane} from "./assets/img/jet.svg";
-import {ReactComponent as TracksMap} from "./assets/img/tracks.svg";
-import {ReactComponent as FAQIcon} from "./assets/img/faq.svg";
-import {ReactComponent as PrizesMedal} from "./assets/img/prizes.svg";
-import {ReactComponent as InfoTent} from "./assets/img/home.svg";
-import {ReactComponent as Arrow} from "./assets/img/arrow.svg";
+import { ReactComponent as JetPlane } from "./assets/img/jet.svg";
+import { ReactComponent as TracksMap } from "./assets/img/tracks.svg";
+import { ReactComponent as FAQIcon } from "./assets/img/faq.svg";
+import { ReactComponent as PrizesMedal } from "./assets/img/prizes.svg";
+import { ReactComponent as InfoTent } from "./assets/img/home.svg";
+import { ReactComponent as Arrow } from "./assets/img/arrow.svg";
 
-import {Col, Container, Row} from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 
 import anime from "animejs/lib/anime.es";
 import ButtonHover from "./components/Button";
@@ -16,7 +16,7 @@ import Prizes from "./sections/Prizes";
 import FAQ from "./sections/FAQ";
 import Information from "./sections/Information";
 import SmjComponent from "./components/SMJComponent";
-import {disableScroll, enableScroll} from "./global";
+import { disableScroll, enableScroll } from "./global";
 
 class App extends React.Component {
   constructor(props) {
@@ -31,7 +31,7 @@ class App extends React.Component {
               "tracks",
               {
                 rotate: "-30deg",
-                translate: {x: "0", y: "0"},
+                translate: { x: "0", y: "0" },
                 scale: 1,
                 opacity: 1,
               },
@@ -44,7 +44,7 @@ class App extends React.Component {
               "tracks",
               {
                 rotate: "0deg",
-                translate: {x: "3.2em", y: "2.8em"},
+                translate: { x: "3.2em", y: "2.8em" },
                 scale: 10,
                 opacity: 0.8,
               },
@@ -73,7 +73,7 @@ class App extends React.Component {
               "prizes",
               {
                 rotate: "0deg",
-                translate: {x: "0%", y: "0%"},
+                translate: { x: "0%", y: "0%" },
                 scale: 1,
                 opacity: 1,
               },
@@ -86,7 +86,7 @@ class App extends React.Component {
               "prizes",
               {
                 rotate: "0deg",
-                translate: {x: "-7%", y: "20%"},
+                translate: { x: "-7%", y: "20%" },
                 scale: 3,
                 opacity: 1.0,
               },
@@ -99,7 +99,7 @@ class App extends React.Component {
           titleID: "prizes-title",
           image: (
             <PrizesMedal
-              style={{background: "none", width: "100%", height: "100%"}}
+              style={{ background: "none", width: "100%", height: "100%" }}
               className="ml-4"
             />
           ),
@@ -112,7 +112,7 @@ class App extends React.Component {
               "faq",
               {
                 rotate: "30deg",
-                translate: {x: "0%", y: "0%"},
+                translate: { x: "0%", y: "0%" },
                 scale: 1,
                 opacity: 1,
               },
@@ -125,7 +125,7 @@ class App extends React.Component {
               "faq",
               {
                 rotate: "0deg",
-                translate: {x: "28%", y: "-37%"},
+                translate: { x: "28%", y: "-37%" },
                 scale: 3,
                 opacity: 1.0,
               },
@@ -140,10 +140,11 @@ class App extends React.Component {
             <FAQIcon
               style={{
                 background: "none",
-                width: "100%",
-                height: "100%",
+                width: "90%",
+                height: "90%",
                 transform: "rotate(-30deg)",
               }}
+              className="mt-4"
             />
           ),
         },
@@ -153,7 +154,7 @@ class App extends React.Component {
               "info",
               {
                 rotate: "0deg",
-                translate: {x: "0%", y: "0%"},
+                translate: { x: "0%", y: "0%" },
                 scale: 1,
                 opacity: 1,
               },
@@ -166,7 +167,7 @@ class App extends React.Component {
               "info",
               {
                 rotate: "0deg",
-                translate: {x: "-15%", y: "-20%"},
+                translate: { x: "-15%", y: "-20%" },
                 scale: 18,
                 opacity: 0.3,
               },
@@ -179,7 +180,7 @@ class App extends React.Component {
           titleID: "info-title",
           image: (
             <InfoTent
-              style={{background: "none", width: "100%", height: "100%"}}
+              style={{ background: "none", width: "100%", height: "100%" }}
             />
           ),
         },
@@ -201,12 +202,12 @@ class App extends React.Component {
       duration: 1500,
       autoplay: true,
       direction: "alternate",
-      loop: true
-    })
+      loop: true,
+    });
 
     arrowTime.add({
       targets: "#down-arrow",
-      translateX: "10em"
+      translateX: "10em",
     });
 
     const t2 = anime.timeline({
@@ -260,7 +261,7 @@ class App extends React.Component {
         {
           delay: "1000",
           targets: ".track-ARVR",
-          keyframes: [{translateY: "25em"}],
+          keyframes: [{ translateY: "25em" }],
           opacity: "1",
         },
         600
@@ -269,7 +270,7 @@ class App extends React.Component {
         {
           delay: "1000",
           targets: ".track-BC",
-          keyframes: [{translateY: "39em"}],
+          keyframes: [{ translateY: "39em" }],
           opacity: "1",
         },
         800
@@ -278,7 +279,7 @@ class App extends React.Component {
         {
           delay: "1000",
           targets: ".track-OI",
-          keyframes: [{translateY: "45em"}],
+          keyframes: [{ translateY: "45em" }],
           opacity: "1",
         },
         1200
@@ -324,13 +325,13 @@ class App extends React.Component {
 
     t6.add({
       targets: ".track-ml",
-      keyframes: [{translateY: 0}],
+      keyframes: [{ translateY: 0 }],
       opacity: "0",
     })
       .add(
         {
           targets: ".track-ARVR",
-          keyframes: [{translateY: 0}],
+          keyframes: [{ translateY: 0 }],
           opacity: "0",
         },
         100
@@ -338,7 +339,7 @@ class App extends React.Component {
       .add(
         {
           targets: ".track-BC",
-          keyframes: [{translateY: 0}],
+          keyframes: [{ translateY: 0 }],
           opacity: "0",
         },
         200
@@ -346,11 +347,11 @@ class App extends React.Component {
       .add(
         {
           targets: ".track-OI",
-          keyframes: [{translateY: 0}],
+          keyframes: [{ translateY: 0 }],
           opacity: "0",
         },
         300
-      )
+      );
   }
 
   showSection(selector, transforms, direction) {
@@ -359,7 +360,7 @@ class App extends React.Component {
     const target = document.querySelector(`.${selector} > svg`);
     const targetSection = document.querySelector(`#${selector}-section`);
     targetSection.style.display = "block";
-    target.style.zIndex = 3
+    target.style.zIndex = 3;
     target.style.cursor = direction === "normal" ? "default" : "pointer";
     const jet = document.querySelector("#jet-plane > svg");
 
@@ -394,10 +395,13 @@ class App extends React.Component {
       translateX: transforms.translate.x,
       translateY: transforms.translate.y,
       opacity: transforms.opacity,
-    }).add({
-      targets: "#down-arrow",
-      opacity: direction === "normal" ? 0 : 1
-    }, 0);
+    }).add(
+      {
+        targets: "#down-arrow",
+        opacity: direction === "normal" ? 0 : 1,
+      },
+      0
+    );
 
     t2.add({
       targets: [`#${selector}-section`],
@@ -433,56 +437,28 @@ class App extends React.Component {
 
   render() {
     return (
-      <div
-        style={{fontFamily: "Poppins", color: "white", background: "#030304"}}
-        onScroll={() => {
-
-        }}
-      >
-        <Container fluid style={{fontFamily: "Blockletter", color: "white"}}>
-          <div id="main-div" className="main-div">
-            <Row
-              className="justify-content-center cod-title"
-              style={{marginTop: "20vh"}}
-            >
+      <>
+        <div style={{ fontFamily: "Poppins", color: "white", background: "#030304" }} onScroll={() => { }}>
+          <Container fluid style={{ fontFamily: "Blockletter", color: "white" }} className="mx-auto">
+            <div id="main-div" className="main-div">
               <h1
+                id="heading"
                 style={{
-                  fontSize: 100,
                   textShadow: "0px 1px 6px #fff",
-                  zIndex: 1,
+                  zIndex: 1
                 }}
-                className="m-0"
+                className="text-center cod-title"
               >
                 code-off duty
-              </h1>
-            </Row>
-            <Row className="justify-content-center" id="jet-plane">
-              <JetPlane
-                style={{
-                  top: window.innerHeight,
-                  position: "absolute",
-                  background: "transparent",
-                }}
-              />
-            </Row>
-            <Row className="px-5 mx-5 bg-transparent h-100 align-content-between"
-                 style={{position: "absolute", top: 0}}>
-              <Row className="justify-content-between">
-                {this.homeSections.firstRow.map((section, index) => (
-                  <Col key={index} xl={2} className="p-4">
-                    <Row
-                      className={`justify-content-center ${section.class}`}
-                      id="section"
-                      style={{opacity: 0}}
-                      onClick={() => section.onClick("normal")}
-                    >
-                      {section.image}
-                      <h2 className="mt-3 ml-4" id={section.titleID}>
-                        {section.title}
-                      </h2>
-                    </Row>
-                  </Col>
-                ))}
+            </h1>
+              <Row className="justify-content-center" id="jet-plane">
+                <JetPlane
+                  id="jet"
+                  style={{
+                    top: window.innerHeight,
+                    position: "absolute",
+                    background: "transparent",
+                  }} />
               </Row>
               <Row className="justify-content-center mt-5 cod-register w-100" style={{opacity: 0, pointerEvents: "none"}}>
                 <ButtonHover label="apply with devfolio" onClick={() => {
@@ -514,39 +490,66 @@ class App extends React.Component {
                       </h2>
                     </Row>
                   </Col>
-                ))}
+                </Row>
+                <Row className="justify-content-between" id="second-row">
+                  {this.homeSections.secondRow.map((section, index) => (
+                    <Col key={index} md={2} className="p-4">
+                      <Row
+                        className={`justify-content-center ${section.class}`}
+                        id="section"
+                        style={{ opacity: 0 }}
+                        onClick={() => section.onClick("normal")}>
+                        {section.image}
+                        <h2 className="mt-3" id={section.titleID}>
+                          {section.title}
+                        </h2>
+                      </Row>
+                    </Col>
+                  ))}
+                </Row>
               </Row>
-            </Row>
+            </div>
+          </Container>
+
+          <div id='mobile' className="mx-auto">
+            <div className='text-center'>
+              <Col sm={10} className='mx-auto mb-5'><TracksMap className='img-svg tracks ' /><h2 className='title'>TRACKS</h2></Col>
+              <Col sm={10} className='mx-auto mb-5'><FAQIcon className='img-svg' /><h2 className='title'>FAQS</h2></Col>
+              <Col sm={10} className='mx-auto mb-4'><PrizesMedal className='img-svg' /><h2 className='title'>PRIZES</h2></Col>
+              <Col sm={10} className='mx-auto'><InfoTent className='img-svg' /><h2 className='title'>WHAT IS COD ?</h2></Col>
+            </div>
           </div>
-          <div id="smj" style={{marginTop: "75vh"}}>
-            <SmjComponent/>
+
+          <div id="smj">
+            <SmjComponent />
           </div>
-        </Container>
-        <Tracks
-          style={{opacity: 0, display: "none"}}
-          goBack={(selector) => {
-            this.goBack(selector, true);
-          }}
-        />
-        <Prizes
-          style={{opacity: 0, display: "none"}}
-          goBack={(selector) => {
-            this.goBack(selector, true);
-          }}
-        />
-        <FAQ
-          style={{opacity: 0, display: "none"}}
-          goBack={(selector) => {
-            this.goBack(selector, false);
-          }}
-        />
-        <Information
-          style={{opacity: 0, display: "none"}}
-          goBack={(selector) => {
-            this.goBack(selector, false);
-          }}
-        />
-      </div>
+
+          <Tracks
+            style={{ opacity: 0, display: "none" }}
+            goBack={(selector) => {
+              this.goBack(selector, true);
+            }}
+          />
+          <Prizes
+            style={{ opacity: 0, display: "none" }}
+            goBack={(selector) => {
+              this.goBack(selector, true);
+            }}
+          />
+          <FAQ
+            style={{ opacity: 0, display: "none" }}
+            goBack={(selector) => {
+              this.goBack(selector, false);
+            }}
+          />
+          <Information
+            style={{ opacity: 0, display: "none" }}
+            goBack={(selector) => {
+              this.goBack(selector, false);
+            }}
+          />
+        </div>
+      </>
     );
   }
 }
