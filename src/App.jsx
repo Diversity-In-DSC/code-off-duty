@@ -220,7 +220,23 @@ class App extends React.Component {
       targets: "#jet-plane > svg",
       opacity: 0.18,
       top: 50,
-    });
+      complete: () => {
+        const script = document.createElement('script');
+        script.src = 'https://apply.devfolio.co';
+        script.async = true;
+        document.body.appendChild(script);
+        script.onload = () => {
+          // eslint-disable-next-line no-undef
+          new Devfolio({key: 'codeoffduty', buttonSelector: '#devfolio-apply-now'});
+        }
+      }
+    }).add({
+      targets: ".cod-register",
+      opacity: 1,
+      complete: () => {
+        document.querySelector(".cod-register").style.pointerEvents = "auto"
+      }
+    }, 1500)
 
     t2.add({
       targets: sections,
@@ -444,38 +460,35 @@ class App extends React.Component {
                     background: "transparent",
                   }} />
               </Row>
-              <Row
-                className="px-md-5 mx-5 bg-transparent" id="container"
-                style={{ position: "absolute", top: 0 }}>
-                <Row className="justify-content-between" id="first-row">
-                  {this.homeSections.firstRow.map((section, index) => (
-                    <Col key={index} md={2} className="p-4">
-                      <Row
-                        className={`justify-content-center ${section.class}`}
-                        id="section"
-                        style={{ opacity: 0 }}
-                        onClick={() => section.onClick("normal")}>
-                        {section.image}
-                        <h2 className="mt-3 ml-4" id={section.titleID}>
-                          {section.title}
-                        </h2>
-                      </Row>
-                    </Col>
-                  ))}
-                </Row>
-                <Row className="mt-5 cod-register mx-auto" id='btn' >
-                  <ButtonHover label="apply with devfolio" />
-                </Row>
-                <Row
-                  className="w-100 justify-content-center mt-5 px-5"
-                  style={{ zIndex: 1 }}>
-                  <Col md={1}>
-                    <Arrow
-                      style={{ transform: "rotate(90deg)" }}
-                      fill="rgb(0, 255, 70)"
-                      id="down-arrow"
-                      strokeWidth={2}
-                    />
+              <Row className="justify-content-center mt-5 cod-register w-100" style={{opacity: 0, pointerEvents: "none"}}>
+                <ButtonHover label="apply with devfolio" onClick={() => {
+                  this.devfolio.click()
+                }}/>
+              </Row>
+              <Row>
+                <span id="devfolio-apply-now" style={{opacity: 0}} ref={(n) => {
+                  this.devfolio = n
+                }}/>
+              </Row>
+              <Row className="w-100 justify-content-center mt-5 px-5" style={{zIndex: 1}}>
+                <Col xl={1}>
+                  <Arrow style={{transform: "rotate(90deg)"}} fill="rgb(0, 255, 70)" id="down-arrow" strokeWidth={2}/>
+                </Col>
+              </Row>
+              <Row className="justify-content-between">
+                {this.homeSections.secondRow.map((section, index) => (
+                  <Col key={index} xl={2} className="p-4">
+                    <Row
+                      className={`justify-content-center ${section.class}`}
+                      id="section"
+                      style={{opacity: 0}}
+                      onClick={() => section.onClick("normal")}
+                    >
+                      {section.image}
+                      <h2 className="mt-3" id={section.titleID}>
+                        {section.title}
+                      </h2>
+                    </Row>
                   </Col>
                 </Row>
                 <Row className="justify-content-between" id="second-row">

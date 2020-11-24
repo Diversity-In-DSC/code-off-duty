@@ -32,28 +32,35 @@ a {
   transition: all 0.3s ease;
 }
 
-.cta span {
-  color: white;
-  position: relative;
-  font-size: 16px;
-  line-height: 18px;
-  font-weight: 900;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  vertical-align: middle;
+.cta .logo {
+	position: relative;
+	stroke: white;
+	fill: white;
+	height: 24px;
+	width: 24px;
+	margin-right: 8px;
 }
 
-.cta svg {
-  position: relative;
-  top: 0;
-  margin-left: 1em;
-  fill: none;
-  stroke-linecap: butt;
-  stroke-linejoin: miter;
-  stroke: #fff;
-  stroke-width: 2;
-  transform: translateX(-0.5em);
-  transition: all 0.3s ease;
+.cta #label {
+	color: white;
+	position: relative;
+	line-height: 18px;
+	letter-spacing: 0.25em;
+	text-transform: uppercase;
+	vertical-align: middle;
+}
+
+.cta .arrow {
+	position: relative;
+	top: 0;
+	margin-left: 1em;
+	fill: none;
+	stroke-linecap: butt;
+	stroke-linejoin: miter;
+	stroke: #fff;
+	stroke-width: 2;
+	transform: translateX(-0.5em);
+	transition: all 0.3s ease;
 }
 
 .cta:hover > #label {
@@ -66,9 +73,13 @@ a {
   cursor: pointer;
 }
 
-.cta:hover svg {
-  transform: translateX(0);
-  stroke: #000;
+.cta:hover .arrow {
+	transform: translateX(0);
+	stroke: #000;
+
+.cta:hover .logo {
+	stroke: #000;
+	fill: #000
 }
 
 .cta:active {
