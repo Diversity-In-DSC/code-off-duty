@@ -442,7 +442,7 @@ class App extends React.Component {
         <Container fluid style={{fontFamily: "Blockletter", color: "white"}}>
           <div id="main-div" className="main-div">
             <Row
-              className="justify-content-center cod-title"
+              className="justify-content-center cod-title mb-5"
               style={{marginTop: "20vh"}}
             >
               <h1
@@ -465,9 +465,8 @@ class App extends React.Component {
                 }}
               />
             </Row>
-            <Row className="px-5 mx-5 bg-transparent h-100 align-content-between"
-                 style={{position: "absolute", top: 0}}>
-              <Row className="justify-content-between">
+            <Row className="px-5 mx-5 bg-transparent position-absolute" style={{ top:0 }}>
+              <Row className="justify-content-between mb-n5">
                 {this.homeSections.firstRow.map((section, index) => (
                   <Col key={index} xl={2} className="p-4">
                     <Row
@@ -484,7 +483,7 @@ class App extends React.Component {
                   </Col>
                 ))}
               </Row>
-              <Row className="justify-content-center mt-5 cod-register w-100" style={{opacity: 0, pointerEvents: "none"}}>
+              <Row className="justify-content-center mt-5 pt-3 cod-register w-100" style={{opacity: 0, pointerEvents: "none"}}>
                 <ButtonHover label="apply with devfolio" onClick={() => {
                   this.devfolio.click()
                 }}/>
@@ -499,7 +498,7 @@ class App extends React.Component {
                   <Arrow style={{transform: "rotate(90deg)"}} fill="rgb(0, 255, 70)" id="down-arrow" strokeWidth={2}/>
                 </Col>
               </Row>
-              <Row className="justify-content-between">
+              <Row className="justify-content-between mt-n5">
                 {this.homeSections.secondRow.map((section, index) => (
                   <Col key={index} xl={2} className="p-4">
                     <Row
