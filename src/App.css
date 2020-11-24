@@ -31,25 +31,26 @@
 @media screen and (max-width: 767px) {
   #mobile {
     display: block;
-    margin-top: 90vh;
+    margin-top: 55vh;
   }
   #first-row,
   #second-row {
     display: none;
   }
   #heading {
-    margin-top: 12vh !important;
-    font-size: 50px;
+    margin-top: 30vh !important;
+    font-size: 48pt;
   }
   #btn {
-    margin-top: 87vh !important;
+    margin-top: 50vh !important;
     margin-left: 2px;
   }
   #jet {
-    width: 320px;
+    width: 80%;
   }
   #down-arrow {
-    display: none;
+    display: "inline";
+    width: 3em;
   }
   #smj {
     margin-top: 100px;
@@ -59,8 +60,8 @@
   }
 
   .img-svg {
-    width: 140px;
-    height: 140px;
+    width: 65%;
+    height: 50%;
     position: relative;
   }
   .title {
