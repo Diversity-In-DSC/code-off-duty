@@ -23,6 +23,7 @@
 #btn {
   align-content: center;
 }
+
 @media screen and (min-width: 767px) {
   #smj {
     margin-top: 90vh;
@@ -53,7 +54,7 @@
     width: 3em;
   }
   #smj {
-    margin-top: 100px;
+    margin-top: 10em;
   }
   #container {
     margin: 0px !important;

@@ -17,6 +17,7 @@ a {
   margin: auto;
   padding: 1.3rem 1.5rem;
   transition: all 0.2s ease;
+  margin-left: 2em;
 }
 
 .cta:before {
@@ -73,11 +74,11 @@ a {
   cursor: pointer;
 }
 
-.cta:hover.arrow {
+.cta:hover .arrow {
   transform: translateX(0);
   stroke: #000;
 }
-.cta:hover.logo {
+.cta:hover .logo {
   stroke: #000;
   fill: #000;
 }

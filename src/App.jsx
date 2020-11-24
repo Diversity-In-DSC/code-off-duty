@@ -12,7 +12,7 @@ import Prizes from './sections/Prizes';
 import FAQ from './sections/FAQ';
 import Information from './sections/Information';
 import SmjComponent from './components/SMJComponent';
-import { enableScroll, getDevice } from './global';
+import { getDevice } from './global';
 import { mobileSections, homeSections } from './data/sectionData';
 import { goBack } from './animations';
 
@@ -25,7 +25,6 @@ class App extends React.Component {
 
 	componentDidMount() {
 		const device = getDevice();
-		enableScroll();
 		const sections = document.querySelectorAll('#section');
 		const t1 = anime.timeline({
 			easing: 'easeInOutExpo',
@@ -142,7 +141,7 @@ class App extends React.Component {
 									/>
 								</Row>
 								<Row className="w-100 justify-content-center text-center mt-5" style={{ zIndex: 1 }}>
-									<Col xl={1} className="mr-n4 m-xl-0">
+									<Col xl={1} className="mr-n4 p-4">
 										<Arrow
 											style={{ transform: 'rotate(90deg)' }}
 											fill="rgb(0, 255, 70)"
@@ -160,7 +159,10 @@ class App extends React.Component {
 										}}
 									/>
 								</Row>
-								<Row className="justify-content-between mt-n5 align-content-center" id="second-row">
+								<Row
+									className="justify-content-between my-n5 py-0 align-content-center"
+									id="second-row"
+								>
 									{this.homeSections.secondRow.map((section, index) => (
 										<Col key={index} md={2} className="p-4">
 											<Row
@@ -181,7 +183,7 @@ class App extends React.Component {
 						</div>
 					</Container>
 
-					<div id="mobile" className="mx-auto d-md-none">
+					<div id="mobile" className="mx-auto d-xl-none">
 						<Container fluid className="text-center">
 							{this.mobileSections.map((mob, idx) => (
 								<div onClick={() => mob.onClick('normal')} key={idx}>

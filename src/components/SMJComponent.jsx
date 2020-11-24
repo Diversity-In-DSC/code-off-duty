@@ -29,7 +29,7 @@ class SmjComponent extends Component {
 	render() {
 		return (
 			<div>
-				<Container>
+				<Container className="mt-n5">
 					<Tabs
 						variant={'pills'}
 						defaultActiveKey={'Speakers'}

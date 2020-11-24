@@ -1,9 +1,8 @@
-import { showSection } from '../animations';
+import { showSection, animations } from '../animations';
 import { ReactComponent as TracksMap } from '../assets/img/tracks.svg';
 import { ReactComponent as FAQIcon } from '../assets/img/faq.svg';
 import { ReactComponent as PrizesMedal } from '../assets/img/prizes.svg';
 import { ReactComponent as InfoTent } from '../assets/img/home.svg';
-import { disableScroll, enableScroll } from '../global';
 
 export const mobileSections = [
 	{
@@ -138,7 +137,6 @@ export const homeSections = {
 					},
 					direction
 				);
-				enableScroll();
 			},
 			onClick: (direction) => {
 				showSection(
@@ -151,8 +149,7 @@ export const homeSections = {
 					},
 					direction
 				);
-				this.animations();
-				disableScroll();
+				animations();
 			},
 			title: 'Tracks',
 			class: 'tracks',
@@ -180,7 +177,6 @@ export const homeSections = {
 					},
 					direction
 				);
-				enableScroll();
 			},
 			onClick: (direction) => {
 				showSection(
@@ -193,7 +189,6 @@ export const homeSections = {
 					},
 					direction
 				);
-				disableScroll();
 			},
 			title: 'Prizes',
 			class: 'prizes',
@@ -214,7 +209,6 @@ export const homeSections = {
 					},
 					direction
 				);
-				enableScroll();
 			},
 			onClick: (direction) => {
 				showSection(
@@ -227,7 +221,6 @@ export const homeSections = {
 					},
 					direction
 				);
-				disableScroll();
 			},
 			title: 'FAQs',
 			class: 'faq',
@@ -256,7 +249,6 @@ export const homeSections = {
 					},
 					direction
 				);
-				enableScroll();
 			},
 			onClick: (direction) => {
 				showSection(
@@ -269,7 +261,6 @@ export const homeSections = {
 					},
 					direction
 				);
-				disableScroll();
 			},
 			title: 'What is COD?',
 			class: 'info',
