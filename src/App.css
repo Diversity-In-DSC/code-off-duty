@@ -1,68 +1,15 @@
 .tracks:hover > svg {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 .prizes:hover > svg {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 .faq:hover > svg {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 .info:hover > svg {
-  cursor: pointer;
-}
-#jet {
-  width: 640px;
-}
-#heading {
-  font-size: 100px;
-  margin-top: 20vh !important;
-}
-#mobile {
-  display: none;
-}
-@media screen and (min-width: 768px) {
-  #smj {
-    margin-top: 90vh;
-  }
-}
-@media screen and (max-width: 768px) {
-  #mobile {
-    display: block;
-    margin-top: 90vh;
-  }
-  #first-row,
-  #second-row {
-    display: none;
-  }
-  #heading {
-    margin-top: 12vh !important;
-    font-size: 50px;
-  }
-  #btn {
-    margin-top: 87vh !important;
-  }
-  #jet {
-    width: 320px;
-  }
-  #down-arrow {
-    display: none;
-  }
-  #smj {
-    margin-top: 100px;
-  }
-  #container {
-    margin: 0px !important;
-  }
-
-  .img-svg {
-    width: 140px;
-    height: 140px;
-    position: relative;
-  }
-  .title {
-    font-family: Blockletter;
-  }
+	cursor: pointer;
 }
