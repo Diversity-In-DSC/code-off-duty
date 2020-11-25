@@ -43,6 +43,8 @@
     font-size: 48pt;
   }
   #btn {
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 50vh !important;
   }
   #jet {
