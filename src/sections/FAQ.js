@@ -14,6 +14,11 @@ class FAQ extends Component {
 			FAQData: FAQData,
 			device: getDevice()
 		};
+
+		this.mobileUi = {
+			accrodingRow: this.state.device !== 'xl' ? "ml-1 mr-n5 mt-n4 mb-5" : ""
+		}
+
 	}
 
 	render() {
@@ -24,7 +29,10 @@ class FAQ extends Component {
 						<Row className="mx-5 align-items-center mt-4">
 							<Col
 								xl={1}
-								className="my-auto ml-5"
+								sm={1}
+								md={1}
+								xs={1}
+								className={this.state.device === 'xs' ? "ml-n5" : ""}
 								onClick={() => {
 									this.props.goBack(this.state.device === 'xs' ? 'mobile-faq' : 'faq');
 								}}
@@ -45,7 +53,7 @@ class FAQ extends Component {
 									<polyline points="8 1 12 5 8 9" />
 								</svg>
 							</Col>
-							<Col xl={2} className="p-0 ml-5">
+							<Col xl={2} md={2} sm={2} xs={2} className="p-0 ml-5">
 								<span style={{ fontFamily: 'Blockletter', fontSize: 42 }}>FAQs</span>
 							</Col>
 						</Row>
@@ -56,7 +64,7 @@ class FAQ extends Component {
 							backgroundColor: 'rgba(0, 0, 0, 0)'
 						}}
 					>
-						<Row className="h-100 align-items-center">
+						<Row className={`h-100 align-items-center ${this.mobileUi.accrodingRow}`}   >
 							<Accordion as={Col}>
 								{this.state.FAQData.map((data, number) => (
 									<Card
@@ -82,7 +90,7 @@ class FAQ extends Component {
 											}}
 										>
 											<Row>
-												<Col sm={11}>
+												<Col xl={11} md={11} sm={10} xs={10}>
 													<h5>
 														<span style={{ fontFamily: 'Blockletter' }}>Question</span>
 														<span style={{ fontFamily: 'Poppins', fontSize: 18 }}>
@@ -90,7 +98,9 @@ class FAQ extends Component {
 														</span>
 													</h5>
 												</Col>
-												<Col>
+												<Col xl={1} md={1} sm={2} xs={2} style={{
+													// display: this.state.device === 'xs' ? 'none' : 'inline',
+												}}>
 													{!data.played ? (
 														<PlayBtn style={{ width: 20, height: 20 }} />
 													) : (
