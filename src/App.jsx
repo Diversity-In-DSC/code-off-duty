@@ -224,7 +224,7 @@ class App extends React.Component {
 						}}
 					/>
 					<Information
-						style={{ opacity: 0, display: 'none' }}
+						style={{ opacity: 0, display: 'none', position: 'absolute', top: 0, zIndex: 999 }}
 						goBack={(selector) => {
 							goBack(selector, false);
 						}}
