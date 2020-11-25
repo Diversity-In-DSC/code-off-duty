@@ -9,3 +9,14 @@ export const getDevice = () => {
 
 	return device;
 };
+
+export const disableScroll = () => {
+	window.scrollTo(0, 0);
+	window.onscroll = () => {
+		window.scrollTo(0, 0);
+	};
+};
+
+export const enableScroll = () => {
+	window.onscroll = () => {};
+};

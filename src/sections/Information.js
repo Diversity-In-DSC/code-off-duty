@@ -36,7 +36,7 @@ class Information extends Component {
 	};
 	render() {
 		return (
-			<Container fluid className="fixed-top px-5" style={this.props.style} id="info-section">
+			<Container fluid className="px-xl-5 px-0 fixed-top" style={this.props.style} id="info-section">
 				<Row className="mx-5 align-items-center mt-4">
 					<Col
 						xl={1}

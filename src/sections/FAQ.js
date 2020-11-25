@@ -16,9 +16,8 @@ class FAQ extends Component {
 		};
 
 		this.mobileUi = {
-			accrodingRow: this.state.device !== 'xl' ? "ml-1 mr-n5 mt-n4 mb-5" : ""
-		}
-
+			accrodingRow: this.state.device !== 'xl' ? 'ml-1 mr-n5 mt-n4 mb-5' : ''
+		};
 	}
 
 	render() {
@@ -32,7 +31,7 @@ class FAQ extends Component {
 								sm={1}
 								md={1}
 								xs={1}
-								className={this.state.device === 'xs' ? "ml-n5" : ""}
+								className={this.state.device === 'xs' ? 'ml-n5' : ''}
 								onClick={() => {
 									this.props.goBack(this.state.device === 'xs' ? 'mobile-faq' : 'faq');
 								}}
@@ -64,7 +63,7 @@ class FAQ extends Component {
 							backgroundColor: 'rgba(0, 0, 0, 0)'
 						}}
 					>
-						<Row className={`h-100 align-items-center ${this.mobileUi.accrodingRow}`}   >
+						<Row className={`h-100 align-items-center ${this.mobileUi.accrodingRow}`}>
 							<Accordion as={Col}>
 								{this.state.FAQData.map((data, number) => (
 									<Card
@@ -98,9 +97,15 @@ class FAQ extends Component {
 														</span>
 													</h5>
 												</Col>
-												<Col xl={1} md={1} sm={2} xs={2} style={{
-													// display: this.state.device === 'xs' ? 'none' : 'inline',
-												}}>
+												<Col
+													xl={1}
+													md={1}
+													sm={2}
+													xs={2}
+													style={{
+														// display: this.state.device === 'xs' ? 'none' : 'inline',
+													}}
+												>
 													{!data.played ? (
 														<PlayBtn style={{ width: 20, height: 20 }} />
 													) : (
