@@ -1,44 +1,17 @@
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  /* background: black; */
+html, body {
+	margin: 0;
+	padding: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background-color: rgba(3, 3, 4, 255);
 }
 
 @font-face {
-  font-family: "Anurati";
-  src: url(./assets/fonts/Anurati-Regular.otf) format("opentype");
+	font-family: "Blockletter";
+	src: url(./assets/fonts/Blockletter.otf) format("opentype");
 }
 
 @font-face {
-  font-family: "Valorant";
-  src: url(./assets/fonts/Valorant.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: "Content";
-  src: url(./assets/fonts/Poppins-Regular.ttf) format("truetype");
-}
-
-@media only screen and (max-width: 768px) {
-  #title {
-    font-size: 30pt;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  #title {
-    font-size: 50pt;
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  #title {
-    font-size: 76pt;
-  }
-}
-
-canvas {
-  z-index: -999;
+	font-family: "Poppins";
+	src: url(./assets/fonts/Poppins-Regular.ttf) format("truetype");
 }

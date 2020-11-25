@@ -1,0 +1,70 @@
+.tracks:hover > svg {
+  cursor: pointer;
+}
+
+.prizes:hover > svg {
+  cursor: pointer;
+}
+
+.faq:hover > svg {
+  cursor: pointer;
+}
+
+.info:hover > svg {
+  cursor: pointer;
+}
+#jet {
+  width: 640px;
+}
+#heading {
+  font-size: 100px;
+  margin-top: 20vh !important;
+}
+#btn {
+  align-content: center;
+}
+
+@media screen and (min-width: 767px) {
+  #smj {
+    margin-top: 90vh;
+  }
+}
+@media screen and (max-width: 767px) {
+  #mobile {
+    display: block;
+    margin-top: 55vh;
+  }
+  #first-row,
+  #second-row {
+    display: none;
+  }
+  #heading {
+    margin-top: 30vh !important;
+    font-size: 48pt;
+  }
+  #btn {
+    margin-top: 50vh !important;
+  }
+  #jet {
+    width: 80%;
+  }
+  #down-arrow {
+    display: "inline";
+    width: 3em;
+  }
+  #smj {
+    margin-top: 10em;
+  }
+  #container {
+    margin: 0px !important;
+  }
+
+  .img-svg {
+    width: 65%;
+    height: 50%;
+    position: relative;
+  }
+  .title {
+    font-family: Blockletter;
+  }
+}
