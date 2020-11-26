@@ -36,7 +36,7 @@ const sponsorData = [
 	[
 		{
 			img: scaler,
-			link: 'https://www.scaler.com/'
+			link: ' https://www.scaler.com/edge/?utm_source=dsc_channels&utm_medium=social&utm_campaign=dsc_wow'
 		}
 	],
 	[
@@ -97,10 +97,6 @@ const sponsorData = [
 	],
 	[
 		{
-			img: hattsoff,
-			link: 'https://www.hattsoffstore.com/'
-		},
-		{
 			img: repl,
 			link: 'https://repl.it/'
 		},
@@ -111,10 +107,6 @@ const sponsorData = [
 		{
 			img: voiceflow,
 			link: 'https://www.voiceflow.com/'
-		},
-		{
-			img: manningPublication,
-			link: 'https://www.manning.com/'
 		},
 		{
 			img: zulip,
