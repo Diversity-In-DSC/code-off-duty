@@ -7,7 +7,7 @@ const speakersData = [
     {
         name: "Mrinal Jain",
         linkedIn: "https://www.linkedin.com/in/mrinaljain",
-        img: null
+        img: "https://scontent.fnag1-3.fna.fbcdn.net/v/t1.0-9/40291087_1953184674745286_8455465470974230528_o.jpg?_nc_cat=111&ccb=2&_nc_sid=09cbfe&_nc_ohc=61pWrZrBLhIAX9rmk3t&_nc_ht=scontent.fnag1-3.fna&oh=ca8df7a713d370e745a83389d2471c6a&oe=5FE570DC"
     },
     {
         name: "Sanskar Tiwari",
