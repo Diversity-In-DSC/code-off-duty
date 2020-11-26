@@ -17,6 +17,8 @@ import { getDevice } from './global';
 import { mobileSections, homeSections } from './data/sectionData';
 import { goBack } from './animations';
 
+import Sponsor from './sections/Sponsor';
+
 class App extends React.Component {
 	constructor(props) {
 		super(props);
@@ -220,6 +222,10 @@ class App extends React.Component {
 
 					<div id="smj">
 						<SmjComponent />
+					</div>
+
+					<div>
+						<Sponsor />
 					</div>
 
 					<Tracks
