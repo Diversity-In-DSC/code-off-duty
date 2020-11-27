@@ -97,10 +97,6 @@ const sponsorData = [
 	],
 	[
 		{
-			img: hattsoff,
-			link: 'https://www.hattsoffstore.com/'
-		},
-		{
 			img: repl,
 			link: 'https://repl.it/'
 		},
