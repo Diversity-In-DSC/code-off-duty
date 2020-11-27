@@ -28,6 +28,16 @@ const judgesData = [
         name: "Aqib Ahmed",
         linkedIn: "https://www.linkedin.com/in/ahmed-aqib/",
         img: "https://media-exp1.licdn.com/dms/image/C5103AQELW7wkaIx3jw/profile-displayphoto-shrink_800_800/0/1583761068892?e=1611792000&v=beta&t=KhL1-QrTXpXJxAfJPtbNERAW-WGVZiB0dFdn1JrPzYA"
+    },
+    {
+        name: "Jyotsana Gupta",
+        linkedIn: "https://www.linkedin.com/in/jyotsna17gupta/",
+        img: "https://media-exp1.licdn.com/dms/image/C5103AQFJRnYPYR2OsA/profile-displayphoto-shrink_800_800/0?e=1611792000&v=beta&t=c4g2aWTqm-GQPIMQlWzlOrw0n5ufb6Aye4koDGytMbY"
+    },
+    {
+        name: "Varsha Jaiswal",
+        linkedIn: "https://www.linkedin.com/in/varshajaiswal/",
+        img: "https://media-exp1.licdn.com/dms/image/C5603AQGsqd_eTjFupA/profile-displayphoto-shrink_800_800/0/1605221121768?e=1611792000&v=beta&t=MVrRYERsZGXiJaKuEAW_nF8FHzOj86zgLcao5_wuVYY"
     }
 ]
 

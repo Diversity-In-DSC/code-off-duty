@@ -4,7 +4,7 @@ import scaler from '../assets/img/sponsers/scaler.png';
 import airmeet from '../assets/img/sponsers/airmeet.png';
 import devfolio from '../assets/img/sponsers/devfolio.png';
 import googleDeveloper from '../assets/img/sponsers/googledev.png';
-import mysoreTourism from '../assets/img/sponsers/mysore.png';
+import mysoreTourism from '../assets/img/sponsers/mysore1.png';
 //gold
 import echoAr from '../assets/img/sponsers/echo.png';
 import tezos from '../assets/img/sponsers/tezos.png';
@@ -80,7 +80,7 @@ const sponsorData = [
 		},
 		{
 			img: jovian,
-			link: 'https://fold.money/'
+			link: 'https://www.jovian.ai/'
 		},
 		{
 			img: digitalOcean,
@@ -96,10 +96,6 @@ const sponsorData = [
 		}
 	],
 	[
-		{
-			img: hattsoff,
-			link: 'https://www.hattsoffstore.com/'
-		},
 		{
 			img: repl,
 			link: 'https://repl.it/'

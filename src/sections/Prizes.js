@@ -15,8 +15,8 @@ class Prizes extends Component {
 				border: '2px solid #db4437'
 			},
 			{
-				title: '1st Prize',
-				data: '',
+				title: '1st Prize..',
+				data: '	',
 				height: '390px',
 				border: '2px solid #F4B400'
 			},
