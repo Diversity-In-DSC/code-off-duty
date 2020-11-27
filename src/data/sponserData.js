@@ -80,7 +80,7 @@ const sponsorData = [
 		},
 		{
 			img: jovian,
-			link: 'https://fold.money/'
+			link: 'https://www.jovian.ai/'
 		},
 		{
 			img: digitalOcean,
