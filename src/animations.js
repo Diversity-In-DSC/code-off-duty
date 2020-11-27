@@ -57,9 +57,9 @@ export const getOtherSections = (selector) => {
 		document.querySelector('.cod-title'),
 		document.querySelector('.cod-register'),
 		document.querySelector(`.${selector} > h2`),
-		document.querySelector('#smj')
+		document.querySelector('#smj'),
+		document.querySelector('#sponsors')
 	]);
-	console.log(selector);
 	if (device === 'xs') {
 		Array.prototype.push.apply(rest, [ document.querySelector(`.${selector}`) ]);
 	}

@@ -12,9 +12,6 @@ export const getDevice = () => {
 
 export const disableScroll = () => {
 	window.scrollTo(0, 0);
-	window.onscroll = () => {
-		window.scrollTo(0, 0);
-	};
 };
 
 export const enableScroll = () => {

@@ -224,7 +224,7 @@ class App extends React.Component {
 						<SmjComponent />
 					</div>
 
-					<div>
+					<div className="mb-5" id="sponsors">
 						<Sponsor />
 					</div>
 

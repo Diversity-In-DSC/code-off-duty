@@ -152,7 +152,7 @@ class Tracks extends Component {
 									background: '#fff',
 									borderRadius: this.state.device === 'xs' ? 10 : '50%',
 									display: 'flex',
-									width: this.state.device === 'xs' ? '80%' : '10em',
+									width: this.state.device === 'xs' ? '70%' : '10em',
 									height: this.state.device === 'xs' ? '8em' : '10em',
 									justifyContent: 'center',
 									alignItems: 'center'
@@ -171,7 +171,7 @@ class Tracks extends Component {
 											fontSize: this.state.device === 'xs' ? '20pt' : '15pt',
 											fontFamily: 'Blockletter'
 										}}
-										className="mt-3 mt-xl-n4 text-center ml-5 ml-xl-0"
+										className="mt-3 mt-xl-n4 text-center ml-xl-0 ml-0"
 									>
 										{track.name}
 									</span>
