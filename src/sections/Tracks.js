@@ -171,7 +171,7 @@ class Tracks extends Component {
 											fontSize: this.state.device === 'xs' ? '20pt' : '15pt',
 											fontFamily: 'Blockletter'
 										}}
-										className="mt-3 text-center ml-5 ml-xl-0"
+										className="mt-3 mt-xl-n4 text-center ml-5 ml-xl-0"
 									>
 										{track.name}
 									</span>
