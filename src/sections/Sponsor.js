@@ -92,6 +92,10 @@ export default class Sponsor extends Component {
 						))}
 					</Accordion>
 				</Row>
+				<br></br>
+				<br></br>
+				<br></br>
+				<br></br>
 			</Container>
 		);
 	}
