@@ -1,5 +1,5 @@
 // title
-import scaler from '../assets/img/sponsers/scaler.png';
+import scaler from '../assets/img/sponsers/sacler1.jpg';
 // platinum
 import airmeet from '../assets/img/sponsers/airmeet.png';
 import devfolio from '../assets/img/sponsers/devfolio.png';
