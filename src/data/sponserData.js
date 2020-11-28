@@ -9,7 +9,7 @@ import mysoreTourism from '../assets/img/sponsers/mysore1.png';
 import echoAr from '../assets/img/sponsers/echo.png';
 import tezos from '../assets/img/sponsers/tezos.png';
 import matic from '../assets/img/sponsers/matic.png';
-import shapeShift from '../assets/img/sponsers/shapeshift.png';
+import portis from '../assets/img/sponsers/portis.png';
 import fold from '../assets/img/sponsers/fold.png';
 import jovian from '../assets/img/sponsers/jovian.png';
 import digitalOcean from '../assets/img/sponsers/digital.png';
@@ -71,8 +71,8 @@ const sponsorData = [
 			link: 'https://matic.network/'
 		},
 		{
-			img: shapeShift,
-			link: 'https://shapeshift.com/'
+			img: portis,
+			link: 'https://www.portis.io/'
 		},
 		{
 			img: fold,
