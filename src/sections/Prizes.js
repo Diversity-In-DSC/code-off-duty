@@ -11,27 +11,28 @@ class Prizes extends Component {
   constructor(props) {
     super(props);
     this.PrizeData = [
+	  {
+		title: "1st Prize..",
+		data: "10000",
+		from: "Swags from Google Developers",
+		height: "390px",
+		border: "2px solid #F4B400",
+	  },
       {
         title: "2nd Prize",
-        data: "8000",
+        data: "5000",
         from: "Swags from Google Developers",
         height: "350px",
         border: "2px solid #db4437",
       },
-      {
-        title: "1st Prize..",
-        data: "12000",
-        from: "Swags from Google Developers",
-        height: "390px",
-        border: "2px solid #F4B400",
-      },
-      {
-        title: "3rd Prize",
-        data: "5000",
-        from: "Swags from Google Developers",
-        height: "350px",
-        border: "2px solid #0F9D58",
-      },
+     
+    //   {
+    //     title: "3rd Prize",
+    //     data: "5000",
+    //     from: "Swags from Google Developers",
+    //     height: "350px",
+    //     border: "2px solid #0F9D58",
+    //   },
     ];
 
     this.sponsorprizes = [
