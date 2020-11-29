@@ -1,6 +1,5 @@
-.track-info {
-  display: none;
-  font-size: small;
+.prize-info {
+  text-align: center;
 }
 
 .prizes0:hover {
@@ -22,84 +21,6 @@
   cursor: pointer;
   color: black;
   animation: fade-in-green 0.7s ease-out;
-}
-
-.track-img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-}
-
-.track0:hover .track-img {
-  display: none;
-}
-
-.track1:hover .track-img {
-  display: none;
-}
-
-.track2:hover .track-img {
-  display: none;
-}
-
-.track3:hover .track-img {
-  display: none;
-}
-
-/* .track:hover:last-child {
-    background-color: #0f9d58;
-    cursor: pointer;
-    animation: fade-in-green 0.7s ease-in;
-  } */
-
-.track0:hover {
-  background-color: #db4437;
-  cursor: pointer;
-  animation: fade-in-red 1s ease-out;
-}
-
-.track1:hover {
-  background-color: #f4b400;
-  cursor: pointer;
-  animation: fade-in-yellow 0.7s ease-out;
-}
-
-.track2:hover {
-  background-color: #4285f4;
-  cursor: pointer;
-  animation: fade-in-blue 0.7s ease-out;
-}
-
-.track3:hover {
-  background-color: #0f9d58;
-  cursor: pointer;
-  animation: fade-in-green 0.7s ease-out;
-}
-
-.track0:hover .track-info {
-  display: block;
-  text-align: center;
-  animation: fade-in 0.7s ease-out;
-}
-
-.track1:hover .track-info {
-  display: block;
-  text-align: center;
-  animation: fade-in 0.7s ease-out;
-}
-
-.track2:hover .track-info {
-  display: block;
-  text-align: center;
-  animation: fade-in 0.7s ease-out;
-}
-
-.track3:hover .track-info {
-  display: block;
-  text-align: center;
-  animation: fade-in 0.7s ease-out;
 }
 
 @keyframes fade-in {
