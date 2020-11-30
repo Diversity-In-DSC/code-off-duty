@@ -12,15 +12,15 @@ class Prizes extends Component {
     super(props);
     this.PrizeData = [
 	  {
-		title: "1st Prize..",
-		data: "10000",
+		title: "1st Prize",
+		data: "10000 +",
 		from: "Swags from Google Developers",
 		height: "390px",
 		border: "2px solid #F4B400",
 	  },
       {
         title: "2nd Prize",
-        data: "5000",
+        data: "5000 +",
         from: "Swags from Google Developers",
         height: "350px",
         border: "2px solid #db4437",
@@ -73,7 +73,7 @@ class Prizes extends Component {
             }}
           />
         ),
-        data1: "200 USD(crypto) fo best D-app bult on portis",
+        data1: "200 USD (crypto) for best D-app bult on portis",
         border: "2px solid #0F9D58",
       },
     ];
