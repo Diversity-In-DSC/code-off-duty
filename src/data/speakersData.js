@@ -28,6 +28,36 @@ const speakersData = [
         name: "Ada Rose Cannon",
         linkedIn: "https://uk.linkedin.com/in/adarose",
         img: "https://media.discordapp.net/attachments/753262993663328406/780084923406876672/mOemByhzGrtkbP8BlgKoHbdLylcAAAAASUVORK5CYII.png"
+    },
+    {
+        name: "Nikita Gandhi",
+        linkedIn: "https://www.linkedin.com/in/nikita-gandhi01/",
+        img: "https://media-exp1.licdn.com/dms/image/C5103AQF3QGnhKFUldA/profile-displayphoto-shrink_800_800/0/1578467205054?e=1612396800&v=beta&t=Rrg8U8GMd2ZXcpHQyLTIKyB6emo7QWtOnp2f_bqMXVY"
+    },
+    {
+        name: "Siddhant Agarwal",
+        linkedIn: "https://www.linkedin.com/in/sidagarwal04/",
+        img: "https://media-exp1.licdn.com/dms/image/C5103AQHQvLZRrzvbNg/profile-displayphoto-shrink_800_800/0?e=1612396800&v=beta&t=y_siQUrcy0ifFtoljWbDz9rJdrxQOTXunX1pBK4ejMY"
+    },
+    {
+        name: "Usha Rengaraju",
+        linkedIn: "https://www.linkedin.com/in/usha-rengaraju-b570b7a2/",
+        img: "https://media-exp1.licdn.com/dms/image/C4D03AQHpl8zfF9cYmQ/profile-displayphoto-shrink_800_800/0/1605122404671?e=1612396800&v=beta&t=xLY2HUQa2CoYLnFQJUVjXaEU4Pq8RMWChahLLQZyMGo"
+    },
+    {
+        name: "Rachel Hu",
+        linkedIn: "https://www.linkedin.com/in/rachelsonghu/",
+        img: "https://media-exp1.licdn.com/dms/image/C5603AQFU7tVFI-h2BQ/profile-displayphoto-shrink_800_800/0?e=1612396800&v=beta&t=ovEVxlMBtiiz1qwxWGwHIOro49D36maNtnTfuxYlOlI"
+    },
+    {
+        name: "Charu Choudha",
+        linkedIn: "https://www.linkedin.com/in/charu-choudha-11725047/",
+        img: "https://media-exp1.licdn.com/dms/image/C5103AQHWb5bsmkUErg/profile-displayphoto-shrink_800_800/0?e=1612396800&v=beta&t=PWgioT3ifrrxw8T9CDW6rx0gtGFemIshpNrySPwlSIU"
+    },
+    {
+        name: "Miri Rodriguez",
+        linkedIn: "https://www.linkedin.com/in/mirirod/",
+        img: "https://media-exp1.licdn.com/dms/image/C5603AQGccVXExmWSeg/profile-displayphoto-shrink_800_800/0?e=1612396800&v=beta&t=udHtFYgzv2cGSDbsHiARfhwWB2SinGhp7S3glveiaJw"
     }
 ]
 
