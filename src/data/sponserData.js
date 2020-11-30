@@ -15,8 +15,10 @@ import jovian from '../assets/img/sponsers/jovian.png';
 import digitalOcean from '../assets/img/sponsers/digital.png';
 import streamYard from '../assets/img/sponsers/streamyard.png';
 import manningPublication from '../assets/img/sponsers/manning.png';
+import egghead from '../assets/img/sponsers/egghead.png';
+
 // silver
-import hattsoff from '../assets/img/sponsers/hattsoff.png';
+// import hattsoff from '../assets/img/sponsers/hattsoff.png';
 import repl from '../assets/img/sponsers/replit.png';
 import sketch from '../assets/img/sponsers/sketch.png';
 import voiceflow from '../assets/img/sponsers/voiceflow.png';
@@ -24,8 +26,11 @@ import zulip from '../assets/img/sponsers/zulip.png';
 import jet from '../assets/img/sponsers/jetbrains.png';
 import developer from '../assets/img/sponsers/fb.png';
 import give from '../assets/img/sponsers/give.png';
+import tasknode from '../assets/img/sponsers/tasknode.png';
+
 // education partners
-import progate from '../assets/img/sponsers/progate.png';
+import progatee from '../assets/img/sponsers/progate.png';
+import strikingly from '../assets/img/sponsers/strikingly.png';
 //community partners
 import flutter from '../assets/img/sponsers/flutter-chandigarh.png';
 import gdg from '../assets/img/sponsers/gdgmysuru.png';
@@ -93,6 +98,10 @@ const sponsorData = [
 		{
 			img: manningPublication,
 			link: 'https://www.manning.com/'
+		},
+		{
+			img: egghead,
+			link: 'https://egghead.io/'
 		}
 	],
 	[
@@ -117,18 +126,26 @@ const sponsorData = [
 			link: 'https://www.jetbrains.com/'
 		},
 		{
-			img: developer,
-			link: 'https://www.facebook.com/groups/DevCIndore/'
+			img: tasknode,
+			link: 'https://www.taskade.com/'
 		},
 		{
 			img: give,
 			link: 'https://givemycertificate.com/'
+		},
+		{
+			img: developer,
+			link: 'https://www.facebook.com/groups/DevCIndore/'
 		}
 	],
 	[
 		{
-			img: progate,
+			img: progatee,
 			link: 'https://progate.com/'
+		},
+		{
+			img: strikingly,
+			link: 'https://www.strikingly.com/'
 		}
 	],
 	[
@@ -143,10 +160,6 @@ const sponsorData = [
 		{
 			img: tensor,
 			link: 'https://www.meetup.com/TFUG-Mysuru/'
-		},
-		{
-			img: developer,
-			link: 'https://www.facebook.com/groups/DevCIndore/'
 		},
 		{
 			img: ksp,
