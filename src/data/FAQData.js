@@ -23,6 +23,16 @@ const FAQData = [
         question: "Will Participation Certificates be provided?",
         answer: "- Yes, participation certificates will be provided to all.",
         played: false,
+    },
+    {
+        question: "Can I start working on my hack before the hackathon?",
+        answer: "- No. In the interest of fairness, students should not be working on their projects before the hackathon begins",
+        played: false,
+    },
+    {
+        question: "Can the team members be from different colleges?",
+        answer: "- Yes, we believe in healthy team spirit which will be ensured if you are allowed to work with the team of your choice",
+        played: false,
     }
 ]
 
