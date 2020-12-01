@@ -18,7 +18,7 @@ import manningPublication from '../assets/img/sponsers/manning.png';
 import egghead from '../assets/img/sponsers/egghead.png';
 
 // silver
-// import hattsoff from '../assets/img/sponsers/hattsoff.png';
+import hattsoff from '../assets/img/sponsers/hattsoff.png';
 import repl from '../assets/img/sponsers/replit.png';
 import sketch from '../assets/img/sponsers/sketch.png';
 import voiceflow from '../assets/img/sponsers/voiceflow.png';
@@ -28,7 +28,7 @@ import developer from '../assets/img/sponsers/fb.png';
 import give from '../assets/img/sponsers/give.png';
 import tasknode from '../assets/img/sponsers/tasknode.png';
 
-// education partners
+// education paRrtners
 import progatee from '../assets/img/sponsers/progate.png';
 import strikingly from '../assets/img/sponsers/strikingly.png';
 //community partners
@@ -60,6 +60,10 @@ const sponsorData = [
 		{
 			img: mysoreTourism,
 			link: 'https://www.mysoretourism.org.in/'
+		},
+		{
+			img: hattsoff,
+			link: 'https://www.hattsoffstore.com/'
 		}
 	],
 	[
