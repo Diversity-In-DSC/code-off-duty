@@ -10,30 +10,36 @@ import "../css/prizes.css";
 class Prizes extends Component {
   constructor(props) {
     super(props);
+
+    //Top 3 Prizes Section
+
     this.PrizeData = [
 	  {
 		title: "1st Prize",
-		data: "10000 +",
+		data: "₹10000 +",
 		from: "Swags from Google Developers",
-		height: "390px",
+		height: "350px",
 		border: "2px solid #F4B400",
 	  },
       {
         title: "2nd Prize",
-        data: "5000 +",
+        data: "₹5000 +",
         from: "Swags from Google Developers",
         height: "350px",
         border: "2px solid #db4437",
       },
      
-    //   {
-    //     title: "3rd Prize",
-    //     data: "5000",
-    //     from: "Swags from Google Developers",
-    //     height: "350px",
-    //     border: "2px solid #0F9D58",
-    //   },
+       {
+      title: "",
+      data: "",
+      from: "More Prizes to be Updated Soon",
+      height: "350px",
+       border: "2px solid #0F9D58",
+      },
     ];
+
+
+    // Sponsorships Prizes Section
 
     this.sponsorprizes = [
       {
@@ -89,8 +95,9 @@ class Prizes extends Component {
         fluid
         className="fixed-top px-xl-5 px-0"
         style={this.props.style}
-        id="prizes-section"
-      >
+        id="prizes-section">
+
+
         <Row className="mx-5 align-items-center mt-4">
           <Col
             xl={1}
@@ -126,6 +133,8 @@ class Prizes extends Component {
             </span>
           </Col>
         </Row>
+
+        
         <Row
           sm={5}
           style={{ marginTop: this.state.device === "xs" ? "3em" : "5em" }}
@@ -158,7 +167,7 @@ class Prizes extends Component {
                     }}
                     className="prize-info"
                   >
-                    <Row className="mt-3">&#8377;{prize.data}</Row>
+                    <Row className="mt-3">{prize.data}</Row>
                     <Row>{prize.from}</Row>
                     <Row className="mt-5">{prize.title}</Row>
                   </Col>
@@ -167,7 +176,7 @@ class Prizes extends Component {
             </Col>
           ))}
         </Row>
-
+                          
         <Row sm={5}>
           {this.sponsorprizes.map((prize, idx) => (
             <Col xl={3} className="mb-5 mb-xl-0 mt-5" key={idx}>
@@ -213,6 +222,10 @@ class Prizes extends Component {
             </Col>
           ))}
         </Row>
+
+
+          
+
       </Container>
     );
   }
