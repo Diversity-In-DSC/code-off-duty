@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.bfab70a8.chunk.css",
-    "main.js": "/static/js/main.a6026103.chunk.js",
-    "main.js.map": "/static/js/main.a6026103.chunk.js.map",
+    "main.js": "/static/js/main.2d61fad6.chunk.js",
+    "main.js.map": "/static/js/main.2d61fad6.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.1709a51a.js",
     "runtime-main.js.map": "/static/js/runtime-main.1709a51a.js.map",
     "static/css/2.1a02f21c.chunk.css": "/static/css/2.1a02f21c.chunk.css",
@@ -15,7 +15,9 @@
     "static/media/032-soldier.fd44f07b.svg": "/static/media/032-soldier.fd44f07b.svg",
     "static/media/ARVR.6de781d2.svg": "/static/media/ARVR.6de781d2.svg",
     "static/media/index.css": "/static/media/Poppins-Regular.8081832f.ttf",
+    "static/media/appstone.22b8f051.png": "/static/media/appstone.22b8f051.png",
     "static/media/arrow.617932c6.svg": "/static/media/arrow.617932c6.svg",
+    "static/media/axure.48cd9824.png": "/static/media/axure.48cd9824.png",
     "static/media/blockchain.db41099b.svg": "/static/media/blockchain.db41099b.svg",
     "static/media/brain.57e931e8.svg": "/static/media/brain.57e931e8.svg",
     "static/media/egghead.d806976d.png": "/static/media/egghead.d806976d.png",
@@ -29,8 +31,10 @@
     "static/media/linkedin.7defd339.svg": "/static/media/linkedin.7defd339.svg",
     "static/media/matic-network-matic-logo.394ee750.svg": "/static/media/matic-network-matic-logo.394ee750.svg",
     "static/media/mysore1.7db312bb.png": "/static/media/mysore1.7db312bb.png",
+    "static/media/noticebard.32a1dfdd.png": "/static/media/noticebard.32a1dfdd.png",
     "static/media/playbtn.cecdb8ea.svg": "/static/media/playbtn.cecdb8ea.svg",
     "static/media/portis-io-logo-vector.f9d16dbc.svg": "/static/media/portis-io-logo-vector.f9d16dbc.svg",
+    "static/media/pratilipi.78265fb3.png": "/static/media/pratilipi.78265fb3.png",
     "static/media/prizes.da04ef33.svg": "/static/media/prizes.da04ef33.svg",
     "static/media/replay.b0191b65.svg": "/static/media/replay.b0191b65.svg",
     "static/media/sacler1.80e0b427.jpg": "/static/media/sacler1.80e0b427.jpg",
@@ -44,6 +48,6 @@
     "static/css/2.1a02f21c.chunk.css",
     "static/js/2.eb23d4ab.chunk.js",
     "static/css/main.bfab70a8.chunk.css",
-    "static/js/main.a6026103.chunk.js"
+    "static/js/main.2d61fad6.chunk.js"
   ]
 }
