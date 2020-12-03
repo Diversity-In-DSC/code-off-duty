@@ -15,7 +15,8 @@ export default class Sponsor extends Component {
 				'Gold Sponsors',
 				'Silver Sponsors',
 				'Education Partners',
-				'Community Parters'
+				'Community Partners',
+				'Media Partners'
 			]
 		};
 
