@@ -60,10 +60,6 @@ const sponsorData = [
 		{
 			img: mysoreTourism,
 			link: 'https://www.mysoretourism.org.in/'
-		},
-		{
-			img: hattsoff,
-			link: 'https://www.hattsoffstore.com/'
 		}
 	],
 	[
@@ -140,6 +136,10 @@ const sponsorData = [
 		{
 			img: developer,
 			link: 'https://www.facebook.com/groups/DevCIndore/'
+		},
+		{
+			img: hattsoff,
+			link: 'https://www.hattsoffstore.com/'
 		}
 	],
 	[
@@ -165,10 +165,10 @@ const sponsorData = [
 			img: tensor,
 			link: 'https://www.meetup.com/TFUG-Mysuru/'
 		},
-		{
-			img: ksp,
-			link: 'https://www.ksp.gov.in/'
-		}
+		// {
+		// 	img: ksp,
+		// 	link: 'https://www.ksp.gov.in/'
+		// }
 	]
 ];
 
