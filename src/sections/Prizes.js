@@ -14,34 +14,114 @@ class Prizes extends Component {
     //Top 3 Prizes Section
 
     this.PrizeData = [
-	  {
-		title: "1st Prize",
-		data: "₹10000 +",
-		from: "Swags from Google Developers",
-		height: "350px",
-		border: "2px solid #F4B400",
-	  },
+      {
+      title: "1st Prize",
+      data: "₹15000 +",
+      from: "Swags from Google Developers",
+      height: "350px",
+      border: "2px solid #F4B400",
+      },
       {
         title: "2nd Prize",
-        data: "₹5000 +",
+        data: "₹10000 +",
         from: "Swags from Google Developers",
         height: "350px",
         border: "2px solid #db4437",
       },
-     
-       {
-      title: "",
-      data: "",
-      from: "More Prizes to be Updated Soon",
+      {
+      title: "3rd Prize",
+      data: "₹8000 +",
+      from: "Swags from Google Developers",
       height: "350px",
        border: "2px solid #0F9D58",
       },
     ];
 
 
+    this.Mysore = [
+      {
+      title: "Build a website or mobile app for Mysuru Tourism",
+      data: "1st Prize",
+      from: "100 USD",
+      height: "350px",
+      border: "2px solid #F4B400",
+      },
+      {
+        title: "Build a website or mobile app for Mysuru Tourism",
+        data: "2nd Prize",
+        from: "75 USD",
+        height: "350px",
+        border: "2px solid #db4437",
+      },
+      {
+      title: "Build a website or mobile app for Mysuru Tourism",
+      data: "3rd Prize",
+      from: "50 USD",
+      height: "350px",
+       border: "2px solid #0F9D58",
+      },
+    ];
+
+
+    this.TrackPrizes = [
+      {
+      title: "Winner of AI-ML Track",
+      data: "₹3000 +",
+      from: "Certificate of Appreciation",
+      height: "350px",
+      border: "2px solid #F4B400",
+      },
+      {
+        title: "Winner of AR-VR Track",
+        data: "₹3000 +",
+        from: "Certificate of Appreciation",
+        height: "350px",
+        border: "2px solid #db4437",
+      },
+      {
+      title: "Winner of Blockchain Track",
+      data: "₹3000 +",
+      from: "Certificate of Appreciation",
+      height: "350px",
+      border: "2px solid #0F9D58",
+      },
+      {
+      title: "Winner of Open Innovation Track",
+      data: "₹3000 +",
+      from: "Certificate of Appreciation",
+      height: "350px",
+      border: "2px solid #0F9D58",
+      },
+    ];
+
+
+    this.UpdatedPrizeData = [
+      {
+      title: "Best Idea Implemented in Police Domain",
+      data: "₹3000 + ",
+      from: "Momento from Karnataka State Police",
+      height: "350px",
+      border: "2px solid #F4B400",
+      },
+      {
+        title: "Best Idea Implemented in Women Safety",
+        data: "₹2000 + ",
+        from: "Tees to whole team",
+        height: "350px",
+        border: "2px solid #db4437",
+      }
+    ];
+
+
     // Sponsorships Prizes Section
 
     this.sponsorprizes = [
+      {
+        title: "echoAR",
+        data1: "$50 Amazon voucher + ",
+        data2: `Feature in EchoAr newsletter`,
+        border: "2px solid #db4437",
+      },
       {
         title: "Tezos",
         logo: (
@@ -176,6 +256,141 @@ class Prizes extends Component {
             </Col>
           ))}
         </Row>
+
+
+
+        <Row
+          sm={5}
+          style={{ marginTop: this.state.device === "xs" ? "3em" : "5em" }}
+          className="d-flex align-items-center"
+        >
+          {this.TrackPrizes.map((prize, idx) => (
+            <Col xl={3} className="mb-5 mb-xl-0" key={idx}>
+              <Container
+                style={{
+                  border: prize.border,
+                  width: "300px",
+                  height: prize.height,
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  color: "white",
+                  textAlign: "center",
+                }}
+                className={`prizes${idx}`}
+              >
+                <div className="prize">
+                  <Col
+                    style={{
+                      fontFamily: "Blockletter",
+                      fontSize: this.state.device === "xs" ? "15pt" : "20pt",
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                    className="prize-info"
+                  >
+                    <Row className="mt-3">{prize.data}</Row>
+                    <Row>{prize.from}</Row>
+                    <Row className="mt-5">{prize.title}</Row>
+                  </Col>
+                </div>
+              </Container>
+            </Col>
+          ))}
+        </Row>
+
+        
+        <Row
+          sm={5}
+          style={{ marginTop: this.state.device === "xs" ? "3em" : "5em" }}
+          className="d-flex align-items-center"
+        >
+          {this.Mysore.map((prize, idx) => (
+            <Col xl={3} className="mb-5 mb-xl-0" key={idx}>
+              <Container
+                style={{
+                  border: prize.border,
+                  width: "300px",
+                  height: prize.height,
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  color: "white",
+                  textAlign: "center",
+                }}
+                className={`prizes${idx}`}
+              >
+                <div className="prize">
+                  <Col
+                    style={{
+                      fontFamily: "Blockletter",
+                      fontSize: this.state.device === "xs" ? "15pt" : "20pt",
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                    className="prize-info"
+                  >
+                    <Row className="mt-3">{prize.data}</Row>
+                    <Row>{prize.from}</Row>
+                    <Row className="mt-5">{prize.title}</Row>
+                  </Col>
+                </div>
+              </Container>
+            </Col>
+          ))}
+        </Row>
+        
+
+        <Row
+          sm={5}
+          style={{ marginTop: this.state.device === "xs" ? "3em" : "5em" }}
+          className="d-flex align-items-center"
+        >
+          {this.UpdatedPrizeData.map((prize, idx) => (
+            <Col xl={3} className="mb-5 mb-xl-0" key={idx}>
+              <Container
+                style={{
+                  border: prize.border,
+                  width: "300px",
+                  height: prize.height,
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  color: "white",
+                  textAlign: "center",
+                }}
+                className={`prizes${idx}`}
+              >
+                <div className="prize">
+                  <Col
+                    style={{
+                      fontFamily: "Blockletter",
+                      fontSize: this.state.device === "xs" ? "15pt" : "20pt",
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                    className="prize-info"
+                  >
+                    <Row className="mt-3">{prize.data}</Row>
+                    <Row>{prize.from}</Row>
+                    <Row className="mt-5">{prize.title}</Row>
+                  </Col>
+                </div>
+              </Container>
+            </Col>
+          ))}
+        </Row>
+
+
+
+
+
                           
         <Row sm={5}>
           {this.sponsorprizes.map((prize, idx) => (
