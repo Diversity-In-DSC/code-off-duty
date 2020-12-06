@@ -17,7 +17,7 @@ const judgesData = [
     {
         name: "Akash James",
         linkedIn: "https://www.linkedin.com/in/akashjames/",
-        img: "https://media-exp1.licdn.com/dms/image/C5603AQG84VwB7hkKaQ/profile-displayphoto-shrink_800_800/0?e=1611792000&v=beta&t=n8mUdhlIZRQSRn5Xvpe6wdPXCL_GR5moSyiaaFN-_AY"
+        img: "https://media-exp1.licdn.com/dms/image/C5603AQE2s_HybRAQCA/profile-displayphoto-shrink_800_800/0/1606773820929?e=1613001600&v=beta&t=pfuUZD1l26c0G4E2HzWYDhUz9Hj6a9Uee7D6wahKx8w"
     },
     {
         name: "Niharika Arora",
