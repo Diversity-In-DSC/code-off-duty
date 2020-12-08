@@ -161,12 +161,6 @@ class App extends React.Component {
 											</svg>Apply with Devfolio
 										</button>
 									</Col>
-									{/* <ButtonHover
-                    label="apply with devfolio"
-                    onClick={() => {
-                      this.devfolio.click();
-                    }}
-                  /> */}
 								</Row>
 								<Row className="w-100 justify-content-center text-center mt-5" style={{ zIndex: 1 }}>
 									<Col xl={1} className="mr-n5 ml-4 p-4 p-xl-4 mr-xl-n4 ml-xl-0">
@@ -221,8 +215,8 @@ class App extends React.Component {
 						</Container>
 					</div>
 
-					<div>
-						<Container style={{ marginTop: "15vh" }}>
+					<div id="timeline-btn">
+						<Container style={{ marginTop: getDevice() === 'xl' ? "75vh" : "15vh" }}>
 							<Row className="justify-content-center">
 								<Col xl={"auto"} md={"auto"} sm={"auto"} xs={"auto"}>
 									<h1
