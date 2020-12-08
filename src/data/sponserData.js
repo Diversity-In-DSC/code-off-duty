@@ -73,6 +73,10 @@ const sponsorData = [
 	],
 	[
 		{
+			img: appstone,
+			link: 'http://appstone.in/'
+		},
+		{
 			img: echoAr,
 			link: 'https://www.echoar.xyz/'
 		},
@@ -113,10 +117,6 @@ const sponsorData = [
 		{
 			img: balsmiq,
 			link: 'https://balsamiq.com/'
-		},
-		{
-			img: appstone,
-			link: 'http://appstone.in/'
 		},
 		{
 			img: axure,
