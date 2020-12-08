@@ -2,7 +2,7 @@ const judgesData = [
     {
         name: "Raghu Raman",
         linkedIn: "https://www.linkedin.com/in/rraagghhu/",
-        img: "https://cdn.discordapp.com/attachments/758539559725301791/785780660237107230/IMG-20201208-WA0020.jpg"
+        img: "https://media.discordapp.net/attachments/785909940391903264/785909986831892490/Raghu.jpg"
     },
     {
         name: "Vrijraj Singh",
