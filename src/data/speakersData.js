@@ -1,5 +1,15 @@
 const speakersData = [
     {
+        name: " Abhimanyu Saxena",
+        linkedIn: "https://www.linkedin.com/in/abhimanyusaxena/",
+        img: "https://media-exp1.licdn.com/dms/image/C5103AQF69s3dfAekIA/profile-displayphoto-shrink_800_800/0/1576514003012?e=1613001600&v=beta&t=-ksVmIPrdNC74kdDfi05xuiRr1-dt5IEeBtIhFbCO1M"
+    },
+    {
+        name: "Raghu Raman",
+        linkedIn: "https://www.linkedin.com/in/rraagghhu/",
+        img: "https://media-exp1.licdn.com/dms/image/C4E03AQGFlcx3OasmZg/profile-displayphoto-shrink_800_800/0?e=1613001600&v=beta&t=UVl5ll5DODMcSGwoC15QJ8EGCouXtf4f4Tm-7J7yUtI"
+    },
+    {
         name: " Sayak Paul",
         linkedIn: "https://www.linkedin.com/in/sayak-paul",
         img: "https://media-exp1.licdn.com/dms/image/C4D03AQFF9JRvKpp50w/profile-displayphoto-shrink_800_800/0/1601111999707?e=1611792000&v=beta&t=ZijHLGm8WY4XLSqX6c54iOJTMYnnQyKhDLvCZgAgw0A"
