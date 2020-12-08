@@ -1,6 +1,6 @@
 const speakersData = [
     {
-        name: " Abhimanyu Saxena",
+        name: "Abhimanyu Saxena",
         linkedIn: "https://www.linkedin.com/in/abhimanyusaxena/",
         img: "https://media.discordapp.net/attachments/785909940391903264/785909991491108917/abhimanyu.jpg"
     },

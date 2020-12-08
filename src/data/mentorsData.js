@@ -7,6 +7,16 @@ const mentorsData = [
         img: "https://media-exp1.licdn.com/dms/image/C5603AQHW8fmOMT54wQ/profile-displayphoto-shrink_800_800/0/1595071664942?e=1611792000&v=beta&t=er3v-WNwYMkGNFBO9tPC7F9LO3mFOv39RnbSkRw7UsY"
     },
     {
+        name: "Jai Kathuria",
+            linkedIn: "https://www.linkedin.com/in/jaikathuria/",
+        img: "https://media.discordapp.net/attachments/785909940391903264/785956108421431326/fa60b1c6-8a7e-4b1e-b92f-379eddf028e3.jpg"
+    },
+    {
+        name: "Aravindhan Natarajan",
+            linkedIn: "https://www.linkedin.com/in/aravindhan-natarajan-467108107/",
+        img: "https://media-exp1.licdn.com/dms/image/C5103AQERp8IdDGZJIA/profile-displayphoto-shrink_800_800/0/1536391437188?e=1613001600&v=beta&t=g3C4CsWTc33q7FXxIPmhteFXrbSET93k5WN4syRL0kA"
+    },
+    {
         name: "Sagar Choudhary",
             linkedIn: "https://www.linkedin.com/in/sagarchoudhary96/",
         img: "https://media-exp1.licdn.com/dms/image/C5103AQH_j1-6UR9Nnw/profile-displayphoto-shrink_800_800/0?e=1611792000&v=beta&t=_bxFva2ZA8TcmIBbEPgIDeyeVOfGquP-jnIh7-5yXos"
