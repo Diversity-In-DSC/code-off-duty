@@ -27,7 +27,7 @@ class PersonalCard extends Component {
                         }
                     </div>
                     <Card.Footer className="bg-transparent">
-                        <h3>{this.data.name}</h3>
+                        <h4>{this.data.name}</h4>
                     </Card.Footer>
                 </Card>
                 <div className="team-links w-100 h-75" >
