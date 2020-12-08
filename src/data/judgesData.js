@@ -1,5 +1,10 @@
 const judgesData = [
     {
+        name: "Raghu Raman",
+        linkedIn: "https://www.linkedin.com/in/rraagghhu/",
+        img: "https://media-exp1.licdn.com/dms/image/C4E03AQGFlcx3OasmZg/profile-displayphoto-shrink_800_800/0?e=1613001600&v=beta&t=UVl5ll5DODMcSGwoC15QJ8EGCouXtf4f4Tm-7J7yUtI"
+    },
+    {
         name: "Vrijraj Singh",
         linkedIn: "https://www.linkedin.com/in/vrijrajsingh/",
         img: "https://media-exp1.licdn.com/dms/image/C4E03AQGiqK4l45czpg/profile-displayphoto-shrink_800_800/0?e=1611792000&v=beta&t=EqynaW0nVQQO7umqBBumJ-TPrveBRdr3d2g4Xd1gHlY"
