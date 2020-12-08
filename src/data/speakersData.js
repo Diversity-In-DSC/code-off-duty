@@ -1,12 +1,12 @@
 const speakersData = [
     {
         name: " Abhimanyu Saxena",
-        linkedIn: "https://www.linkedin.com/in/abhimanyusaxena/",
+        linkedIn: "https://cdn.discordapp.com/attachments/758539559725301791/785780583446872064/IMG-20201208-WA0019.jpg",
         img: "https://media-exp1.licdn.com/dms/image/C5103AQF69s3dfAekIA/profile-displayphoto-shrink_800_800/0/1576514003012?e=1613001600&v=beta&t=-ksVmIPrdNC74kdDfi05xuiRr1-dt5IEeBtIhFbCO1M"
     },
     {
         name: "Raghu Raman",
-        linkedIn: "https://www.linkedin.com/in/rraagghhu/",
+        linkedIn: "https://cdn.discordapp.com/attachments/758539559725301791/785780660237107230/IMG-20201208-WA0020.jpg",
         img: "https://media-exp1.licdn.com/dms/image/C4E03AQGFlcx3OasmZg/profile-displayphoto-shrink_800_800/0?e=1613001600&v=beta&t=UVl5ll5DODMcSGwoC15QJ8EGCouXtf4f4Tm-7J7yUtI"
     },
     {

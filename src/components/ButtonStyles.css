@@ -36,6 +36,10 @@ button:focus {
   background-color: #2954BF !important;
 }
 
+.b {
+  border: none;
+}
+
 a {
   text-decoration: none;
   color: inherit;

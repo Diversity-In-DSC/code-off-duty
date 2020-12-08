@@ -18,6 +18,7 @@ import streamYard from '../assets/img/sponsers/streamyard.png';
 import manningPublication from '../assets/img/sponsers/manning.png';
 import egghead from '../assets/img/sponsers/egghead.png';
 import noticebard from '../assets/img/sponsers/noticebard.png';
+import wolfram from '../assets/img/sponsers/wolfram.bmp';
 
 // silver
 import hattsoff from '../assets/img/sponsers/hattsoff.png';
@@ -73,10 +74,6 @@ const sponsorData = [
 	],
 	[
 		{
-			img: appstone,
-			link: 'http://appstone.in/'
-		},
-		{
 			img: echoAr,
 			link: 'https://www.echoar.xyz/'
 		},
@@ -111,6 +108,14 @@ const sponsorData = [
 		{
 			img: egghead,
 			link: 'https://egghead.io/'
+		},
+		{
+			img: wolfram,
+			link: 'https://www.wolfram.com/'
+		},
+		{
+			img: appstone,
+			link: 'http://appstone.in/'
 		}
 	],
 	[	
@@ -166,7 +171,7 @@ const sponsorData = [
 		},
 		{
 			img: jovian,
-			link: 'https://www.jovian.ai/'
+			link: 'https://jovian.ai/docs/_images/jovian_horizontal_logo.svg'
 		},
 		{
 			img: strikingly,

@@ -3,7 +3,7 @@ import './App.css';
 import { ReactComponent as JetPlane } from './assets/img/jet.svg';
 import { ReactComponent as Arrow } from './assets/img/arrow.svg';
 
-import { Col, Container, Row } from 'react-bootstrap';
+import {Button, Col, Container, Row} from 'react-bootstrap';
 
 import anime from 'animejs/lib/anime.es';
 // import ButtonHover from './components/Button';
@@ -18,6 +18,7 @@ import { mobileSections, homeSections } from './data/sectionData';
 import { goBack } from './animations';
 
 import Sponsor from './sections/Sponsor';
+import ButtonHover from "./components/Button";
 
 class App extends React.Component {
 	constructor(props) {
@@ -217,6 +218,26 @@ class App extends React.Component {
 									</Col>
 								</div>
 							))}
+						</Container>
+					</div>
+
+					<div>
+						<Container style={{ marginTop: "15vh" }}>
+							<Row className="justify-content-center">
+								<Col xl={"auto"} md={"auto"} sm={"auto"} xs={"auto"}>
+									<h1
+										style={{ fontSize: "4rem", textShadow: '0px 1px 6px #fff', zIndex: 1, fontFamily: "Blockletter" }}
+										className="text-center"
+									>
+										Checkout Timeline
+									</h1>
+								</Col>
+							</Row>
+							<Row className="justify-content-center mt-5">
+								<Col xl={"auto"} md={"auto"} sm={"auto"} xs={"auto"}>
+									<a href="https://bit.ly/hackathon-schedule"><ButtonHover label="Timeline"/></a>
+								</Col>
+							</Row>
 						</Container>
 					</div>
 
