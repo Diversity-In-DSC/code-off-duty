@@ -1,8 +1,8 @@
 const judgesData = [
     {
         name: "Raghu Raman",
-        linkedIn: "https://cdn.discordapp.com/attachments/758539559725301791/785780660237107230/IMG-20201208-WA0020.jpg",
-        img: "https://media-exp1.licdn.com/dms/image/C4E03AQGFlcx3OasmZg/profile-displayphoto-shrink_800_800/0?e=1613001600&v=beta&t=UVl5ll5DODMcSGwoC15QJ8EGCouXtf4f4Tm-7J7yUtI"
+        linkedIn: "https://www.linkedin.com/in/rraagghhu/",
+        img: "https://cdn.discordapp.com/attachments/758539559725301791/785780660237107230/IMG-20201208-WA0020.jpg"
     },
     {
         name: "Vrijraj Singh",
