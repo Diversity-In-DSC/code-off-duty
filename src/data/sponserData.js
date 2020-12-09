@@ -65,7 +65,7 @@ const sponsorData = [
 		},
 		{
 			img: mysoreTourism,
-			link: 'https://www.mysoretourism.org.in/'
+			link: 'http://mysuru.org/'
 		},
 		{
 			img: pratilipi,
@@ -115,7 +115,7 @@ const sponsorData = [
 		},
 		{
 			img: appstone,
-			link: 'http://appstone.in/'
+			link: 'https://nextstacks.com/'
 		}
 	],
 	[	
