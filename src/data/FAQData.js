@@ -10,8 +10,8 @@ const FAQData = [
         played: false,
     },
     {
-        question: "Who can attend DSC WOW?",
-        answer: "- Students, Developers, Communities & Institutions.",
+        question: "What is the team size required for COD?",
+        answer: "Minimum 2 and Maximum 3.",
         played: false,
     },
     {
