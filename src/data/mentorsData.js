@@ -2,6 +2,16 @@
 
 const mentorsData = [
     {
+        name: "Devraj Kumar",
+            linkedIn: "https://www.linkedin.com/in/iamdevraj/",
+        img: "https://media-exp1.licdn.com/dms/image/C5103AQFnVnEyaihBLw/profile-displayphoto-shrink_800_800/0/1574600734198?e=1613606400&v=beta&t=-scBn-CZUOLXQShqi7WlsM84bviTFgDOsOSt0YC0rTg"
+    },
+    {
+        name: "Sahyog Saini",
+            linkedIn: "https://www.linkedin.com/in/sahyog-saini-4b511617b/",
+        img: "https://media-exp1.licdn.com/dms/image/C4E35AQFBMx7zVHaRKA/profile-framedphoto-shrink_800_800/0/1607263785507?e=1608321600&v=beta&t=feeZGcryuPJuUpVYeRyiCbbHX-RM-tQhvOE4FL_E_1s"
+    },
+    {
         name: "Shuvam Manna",
             linkedIn: "https://www.linkedin.com/in/shuvam-manna/",
         img: "https://media-exp1.licdn.com/dms/image/C5603AQHW8fmOMT54wQ/profile-displayphoto-shrink_800_800/0/1595071664942?e=1611792000&v=beta&t=er3v-WNwYMkGNFBO9tPC7F9LO3mFOv39RnbSkRw7UsY"
