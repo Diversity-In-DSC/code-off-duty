@@ -2,12 +2,17 @@
 
 const mentorsData = [
     {
+        name: "Tarun Agarwal",
+        linkedIn: "https://www.linkedin.com/in/ertarunagarwal/",
+        img: "https://media.discordapp.net/attachments/785909940391903264/789358266235879444/IMG-20200215-WA0008.jpg"
+    },
+    {
         name: "Devraj Kumar",
             linkedIn: "https://www.linkedin.com/in/iamdevraj/",
         img: "https://media-exp1.licdn.com/dms/image/C5103AQFnVnEyaihBLw/profile-displayphoto-shrink_800_800/0/1574600734198?e=1613606400&v=beta&t=-scBn-CZUOLXQShqi7WlsM84bviTFgDOsOSt0YC0rTg"
     },
     {
-        name: "Sahyog Saini",
+        name: "Sahyog Saini ",
             linkedIn: "https://www.linkedin.com/in/sahyog-saini-4b511617b/",
         img: "https://media-exp1.licdn.com/dms/image/C4E35AQFBMx7zVHaRKA/profile-framedphoto-shrink_800_800/0/1607263785507?e=1608321600&v=beta&t=feeZGcryuPJuUpVYeRyiCbbHX-RM-tQhvOE4FL_E_1s"
     },
